@@ -29,6 +29,34 @@
 background-color:rgb(72,198,200);
 color: #ffffff;
 }
+
+#content_progress {
+      /* Positioning */
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      height: 5px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border: none;
+      background-color: transparent;
+      color: rgb(72,198,200);
+}
+
+#content_progress::-webkit-progress-bar {
+      background-color: transparent;
+}
+
+#content_progress::-webkit-progress-value {
+      background-color:rgb(72,198,200);
+}
+
+#content_progress::-moz-progress-bar {
+      background-color:rgb(72,198,200);
+}
   
   
   
@@ -37,6 +65,8 @@ color: #ffffff;
 </head>
   
 <body>
+
+<progress id="content_progress" value="0"></progress>
 
 <header style="position: fixed; top:0;width:100%; color:black; z-index: 1;">
 
@@ -166,6 +196,7 @@ src="https://www.youtube.com/embed/xkYT3DbLj08">
 <th width=50px></th>
   
 <td>
+<font>
 要使用因式法求解二次方程，我們首先需要將方程寫成 (ax + b)(cx + d) = 0 的形式，其中 a、b、c 和 d 是常數。然後，我們可以將每個因子設置為零並求解 x。<br>
 <br>
 這是一個示例解決方案：<br>
@@ -323,6 +354,23 @@ x = -2 或 x = -3<br>
        
 <br><br><br>
   
+     
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+      var winHeight = window.innerHeight,
+            docHeight = document.documentElement.scrollHeight,
+            progressBar = document.querySelector('#content_progress');
+      progressBar.max = docHeight - winHeight;
+      progressBar.value = window.scrollY;
+
+      document.addEventListener('scroll', function () {
+            progressBar.max = document.documentElement.scrollHeight - window.innerHeight;
+            progressBar.value = window.scrollY;
+      });
+});
+
+</script>     
      
 
 </body>
