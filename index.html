@@ -27,11 +27,42 @@ color: #ffffff;
   text-decoration-color:rgb(72,198,200);
 }
 
+#content_progress {
+      /* Positioning */
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      height: 5px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border: none;
+      background-color: transparent;
+      color: rgb(72,198,200);
+}
+
+#content_progress::-webkit-progress-bar {
+      background-color: transparent;
+}
+
+#content_progress::-webkit-progress-value {
+      background-color:rgb(72,198,200);
+}
+
+#content_progress::-moz-progress-bar {
+      background-color:rgb(72,198,200);
+}
+
 </style>
   
 </head>
   
 <body>
+
+<progress id="content_progress" value="0"></progress>
+
 
 <header style="position: fixed; top:0;width:100%; color:black; z-index: 1; background-color:rgba(255,255,255,0.8);">
 
@@ -245,6 +276,24 @@ color: #ffffff;
 
     // 每一段时间调用一次 showQuote 函数.
     setInterval(showQuote,10* 1000);
+    
+    
+    
+    document.addEventListener('DOMContentLoaded', function () {
+      var winHeight = window.innerHeight,
+            docHeight = document.documentElement.scrollHeight,
+            progressBar = document.querySelector('#content_progress');
+      progressBar.max = docHeight - winHeight;
+      progressBar.value = window.scrollY;
+
+      document.addEventListener('scroll', function () {
+            progressBar.max = document.documentElement.scrollHeight - window.innerHeight;
+            progressBar.value = window.scrollY;
+      });
+});
+    
+    
+    
   </script>
 
 </body>
