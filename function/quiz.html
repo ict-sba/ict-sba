@@ -1,0 +1,511 @@
+<html>
+
+<head>  
+<style>
+@import url（https://fonts.googleapis.com/earlyaccess/notosanstc.css）;
+
+span.frac {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+span.frac > sup, span.frac > sub {
+  display: block;
+  font: inherit;
+  padding: 0 0.3em;
+}
+span.frac > sup {border-bottom: 0.08em solid;}
+span.frac > span {display: none;}
+  
+body{
+font-family:'Noto Sans TC',sans-serif;
+background-color:rgb(245,245,245);
+}
+
+span.frac {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+span.frac > sup, span.frac > sub {
+  display: block;
+  font: inherit;
+  padding: 0 0.3em;
+}
+span.frac > sup {border-bottom: 0.08em solid;}
+span.frac > span {display: none;}
+  
+.name{
+font-size:22px;
+}
+
+.header{
+z-index:999;
+left:0;
+box-shadow: 0px 4px 8px 0px rgba(62,109,156,0.1);
+background-color:white;
+height:50px
+}
+  
+.header-button{
+color:black;
+background-color:transparent;
+font-size:18px;
+border: none;
+text-decoration-color:#FD841F;
+text-decoration-thickness: 3px;
+}
+
+.header-button:hover{
+font-weight: bold;
+color:#3E6D9C;
+text-decoration:underline;
+text-decoration-color:#FD841F;
+text-decoration-thickness: 3px;
+}
+
+.block{
+padding:30px;
+background-color:white;
+border-radius:6px;
+box-shadow:0px 0px 8px 4px rgba(62,109,156,0.1);
+}
+  
+.block-details{
+vertical-align: middle;
+color:#3E6D9C;
+font-size:25px;
+text-align:left;
+}
+  
+.block-title{
+vertical-align: middle;
+color:#3E6D9C;
+font-size:25px;
+text-align:left;
+}
+  
+.block-content{
+color:black;
+font-size:20px;
+text-align:left;
+}
+ 
+.introduce{
+vertical-align: middle;
+text-align:center;
+height:30vh;
+width:100%;
+} 
+  
+.introduce-title{
+font-size:45px;
+}   
+ 
+.introduce-content{
+font-size:20px;
+}  
+  
+
+.answers label{
+display: block;
+}
+  
+#submit{
+border:none;
+font-size:18px;
+transition: 0.2s;
+color:black;
+text-align:center;
+border-radius:5px;
+padding:10px;
+background-color:white;
+box-shadow:0px 0px 8px 4px rgba(62,109,156,0.1);
+}
+  
+#submit:hover{
+transition: 0.2s;
+color:white;
+text-align:center;
+border-radius:5px;
+background-color:#3E6D9C;
+box-shadow:0px 0px 8px 4px rgba(62,109,156,0.1);
+}
+</style>
+</head>
+  
+  
+<body>
+<header>
+<table  class="header" width=100% style="top:0; position:fixed;">
+<tr>
+  <td></td>
+  <td width=2%></td>
+  <td><font class="name"><b>算學思辯</b></font></td>
+  
+  <td width=40%></td>
+  
+  
+  <td><a href=""><button class="header-button"><font>題庫</font></button></a></td>
+  
+  
+  <td><a href=""><button class="header-button"><font>工具</font></button></a></td>
+  
+  
+  <td><a href=""><button class="header-button"><font>課題</font></button></a></td>
+  
+  
+  <td><a href=""><button class="header-button"><font>測驗</font></button></a></td>
+  
+  
+  <td><a href=""><button class="header-button"><font>關於我們</font></button></a></td>
+  
+</tr>
+</table>
+</header>
+  
+<br><br><br>
+  
+<table class="introduce">
+<tr>
+<td>
+<font class="introduce-title">測驗</font><br>
+  
+<font class="introduce-content">  
+測驗可以幫助學習者檢驗自己的學習成果，確定哪些方面需要加強或哪些知識點已經掌握，<br>
+進而有針對性地繼續學習，促進學習效果的提高。
+</font>
+<br><br><br>
+</td>   
+  
+</tr>
+</table><br>   
+  
+<div class="block-group">  
+<div class="block">
+<details class="block-details">
+<summary>
+<font class="block-title">
+二次方程 Quadratic Equation</font>
+</summary>
+<font class="block-content">
+<div id="quiz"></div>
+  
+  
+<table width=100%>
+<tr>
+<td><button id="submit">&emsp;提交&emsp;</button></td>
+<td><div id="results" style="float:right; font-size:25px;"></div></td>
+</tr>
+</table>  
+  
+</font>
+</details>
+</div><br> 
+  
+<div class="block">
+<details class="block-details">
+<summary>
+<font class="block-title">
+複數 Complex Number</font><br>
+</summary>
+<font class="block-content">
+<br>
+:)
+</font>
+</details>
+</div><br> 
+  
+<div class="block">
+<details class="block-details">
+<summary>
+<font class="block-title">
+函數及其圖像 Functions & Graph</font><br>
+</summary>
+<font class="block-content">
+<br>
+:)
+</font>
+</details>
+</div><br> 
+  
+<div class="block">
+<details class="block-details">
+<summary>
+<font class="block-title">
+指數與對數函數 Exponential & Logarithmic Functions</font><br>
+</summary>
+<font class="block-content">
+<br>
+:)
+</font>
+</details>
+</div><br> 
+  
+<div class="block">
+<details class="block-details">
+<summary>
+<font class="block-title">
+多項式 Polynomial</font><br>
+</summary>
+<font class="block-content">
+<br>
+:)
+</font>
+</details>
+</div><br> 
+  
+<div class="block">
+<details class="block-details">
+<summary>
+<font class="block-title">
+變分 Variation</font><br>
+</summary>
+<font class="block-content">
+<br>
+:)
+</font>
+</details>
+</div><br>   
+  
+<div class="block">
+<details class="block-details">
+<summary>
+<font class="block-title">
+等差與等比數列 Arithmetic & Geometric Sequence</font><br>
+</summary>
+<font class="block-content">
+<br>
+:)
+</font>
+</details>
+</div><br> 
+  
+<div class="block">
+<details class="block-details">
+<summary>
+<font class="block-title">
+不等式與線性規劃 Inequalities & Linear Programming</font><br>
+</summary>
+<font class="block-content">
+<br>
+:)
+</font>
+</details>
+</div><br>  
+  
+  
+</div><br>
+
+
+<script>
+
+(function(){
+  function buildQuiz(){
+    // variable to store the HTML output
+    const output = [];
+
+    // for each question...
+    myQuestions.forEach(
+      (currentQuestion, questionNumber) => {
+
+        // variable to store the list of possible answers
+        const answers = [];
+
+        // and for each available answer...
+        for(letter in currentQuestion.answers){
+
+          // ...add an HTML radio button
+          answers.push(
+            `<label>
+              <input type="radio" name="question${questionNumber}" value="${letter}">
+              ${letter} :
+              ${currentQuestion.answers[letter]}
+            </label>`
+          );
+        }
+
+        // add this question and its answers to the output
+        output.push(
+          `<div class="question"> ${currentQuestion.question} </div>
+          <div class="answers"> ${answers.join('')} </div>`
+        );
+      }
+    );
+
+    // finally combine our output list into one string of HTML and put it on the page
+    quizContainer.innerHTML = output.join('');
+  }
+
+  function showResults(){
+
+    // gather answer containers from our quiz
+    const answerContainers = quizContainer.querySelectorAll('.answers');
+
+    // keep track of user's answers
+    let numCorrect = 0;
+
+    // for each question...
+    myQuestions.forEach( (currentQuestion, questionNumber) => {
+
+      // find selected answer
+      const answerContainer = answerContainers[questionNumber];
+      const selector = `input[name=question${questionNumber}]:checked`;
+      const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+      // if answer is correct
+      if(userAnswer === currentQuestion.correctAnswer){
+        // add to the number of correct answers
+        numCorrect++;
+
+        // color the answers green
+        answerContainers[questionNumber].style.color = '#3DAC5E';
+      }
+      // if answer is wrong or blank
+      else{
+        // color the answers red
+        answerContainers[questionNumber].style.color = '#E91D1D';
+      }
+    });
+
+    // show number of correct answers out of total
+    resultsContainer.innerHTML = `${numCorrect} / ${myQuestions.length}`;
+  }
+
+  const quizContainer = document.getElementById('quiz');
+  const resultsContainer = document.getElementById('results');
+  const submitButton = document.getElementById('submit');
+  const myQuestions = [
+    {
+      question: "<br>1. 下列哪項不是二次方程?<br>Which of the following is not a quadratic equation?",
+      answers: {
+        a: "x(2)+ 3x – 5 = 0",
+        b: "(x)(x) + 2 = 0",
+        c: "3 + x + x² = 0",
+        d: "x² – 9 = 0<br><br>"
+      },
+      correctAnswer: "a"
+    },
+
+    
+    {
+      question: "2.如果 x(x + 1) = 2(x + 1)，則 x 等於<br>If x(x + 1) = 2(x + 1), then x is equal to",
+      answers: {
+        a: "1",
+        b: "1 or 2",
+        c: "1 or -2",
+        d: "-1 or 2<br><br>"
+        
+      },
+      correctAnswer: "d"
+    },
+
+    
+    {
+      question: "3. 如果 x ≠ y 且 4x² + 11x = 4y² + 11y = 19，則 (x + 1)(y + 1) = <br>If x ≠ y and 4x² + 11x = 4y² + 11y = 19, then (x + 1)(y + 1) =",
+      answers: {
+        a: "-1",
+        b: "<sup>17</sup><span>&frasl;</span><sub>3</sub>",
+        c: "<sup>-13</sup><span>&frasl;</span><sub>2</sub>",
+        d: "3<br><br>"
+      },
+      correctAnswer: "c"
+    },
+
+    
+    {
+      question: "4.如果 (x + 3)² - C = Ax² Bx + 4 ，求出 A + B + C 的值。<br>If (x + 3)² - C = Ax² Bx + 4 , find the values of A + B + C.",
+      answers: {
+        a: "6",
+        b: "12",
+        c: "9",
+        d: "2<br><br>"
+      },
+      correctAnswer: "b"
+    },
+
+    
+    {
+      question: "5.如果 α 和 β 是二次方程 x² + 3x + k = 0 的根，其中 k 是常數，求出 α² − 3β 的值。<br>If α and β are the roots of the quadratic equation x² + 3x + k = 0 , where k is constant, find the values of α² − 3β.",
+      answers: {
+        a: "k + 9",
+        b: "-k -9",
+        c: "-9 + k",
+        d: "9 - k<br><br>"
+      },
+      correctAnswer: "d"
+    },
+
+    
+    {
+      question: "6.因式分解 5x² - 8xy + 3y² + 10x - 6y =<br>Factorize 5x² - 8xy + 3y² + 10x - 6y =",
+      answers: {
+        a: "(5x + 3y)(x - y +2)",
+        b: "(5x - 3y)(x - y +2)",
+        c: "(5x + 3y)(x + y +2)",
+        d: "(5x - 3y)(x + y +2)<br><br>"
+      },
+      correctAnswer: "b"
+    },
+
+    
+    {
+      question: "7.這個網站做得怎樣?",
+      answers: {
+        a: "啊......",
+        b: "外接圓",
+        c: "好",
+        d: "還行<br><br>"
+      },
+      correctAnswer: "c"
+    },
+
+    
+    {
+      question: "8.找出 x² + 7x - 5 = 0 的判別式<br>Find the discriminant of x² + 7x - 5 = 0",
+      answers: {
+        a: "69",
+        b: "70",
+        c: "65",
+        d: "64<br><br>"
+      },
+      correctAnswer: "a"
+    },
+    
+    {
+      question: "9.找出 x² + 7x - 5 = 0 的根的性質<br>Find the nature of roots of x² + 7x - 5 = 0",
+      answers: {
+        a: "一個重複實根 1 repeated real root",
+        b: "二個實根 2 real roots",
+        c: "沒有實根 no real roots",
+        d: "三個實根 3 real roots<br><br>"
+      },
+      correctAnswer: "b"
+    },
+    
+    {
+      question: "10.如果 3x² - 7x + k = 2 有實根，求 k 的範圍。<br>If 3x² - 7x + k = 2 has real roots, find the range of k.",
+      answers: {
+        a: "k &#8804; <sup>73</sup><span>&frasl;</span><sub>12</sub>",
+        b: "k < <sup>73</sup><span>&frasl;</span><sub>12</sub>",
+        c: "k &#8804; <sup>70</sup><span>&frasl;</span><sub>16</sub>",
+        d: "k = 73<br><br>"
+      },
+      correctAnswer: "a"
+    },
+        
+  
+
+  ];
+
+  // Kick things off
+  buildQuiz();
+
+  // Event listeners
+  submitButton.addEventListener('click', showResults);
+})();
+
+</script>  
+  
+  
+</body>
+</html>
