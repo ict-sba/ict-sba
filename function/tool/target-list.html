@@ -134,12 +134,12 @@ font-size:25px;
 }
   
 .list{
-margin:30px;
+margin:20px;
 }
 
 input{
 width:calc(100% - 110px);
-padding: 10px 20px;
+padding: 10px 10px;
 margin: 8px 0;
 display: inline-block;
 border: 1px solid #ccc;
@@ -319,20 +319,27 @@ display:block;
 
   
 
-  
-function checkCookiesEnabled() {
-  var areCookiesEnabled = navigator.cookieEnabled;
-  if (!areCookiesEnabled) {
-    alert("請在您的瀏覽器中啟用 cookie🍪 以使用本網站。");
+function askForCookieConsent() {
+  // Check if user has already given consent
+  var hasConsented = localStorage.getItem('cookieConsent');
+  if (hasConsented === 'true') {
+    // Cookies are enabled, continue with website functionality
+    return;
+  }
+
+  // Ask for user's consent to enable cookies
+  var consent = confirm('本網站使用 cookie🍪 來改善您的體驗。您同意使用 cookie🍪 嗎？🫡(用途:用於儲存目標清單的輸入資料，讓你在再次流覽本網站時能夠顯示)');
+  if (consent) {
+    // Set cookie and proceed with website functionality
+    localStorage.setItem('cookieConsent', 'true');
+  } else {
+    // Disable cookies and notify the user
+    localStorage.setItem('cookieConsent', 'false');
+    alert('Cookie 已被禁用。本網站的某些功能可能無法按預期工作。');
   }
 }
 
-var consent = confirm("本網站使用 cookie🍪 來改善您的體驗。您同意使用 cookie🍪 嗎？🫡(用途:用於儲存目標清單的輸入資料，讓你在再次流覽本網站時能夠顯示)");
-if (consent) {
-  // Set cookie and proceed with website functionality
-} else {
-  // Redirect or display alternative message for users who do not consent to cookies
-}
+askForCookieConsent();
 </script>
 </body>
 </html>
