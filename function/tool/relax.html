@@ -1,7 +1,6 @@
 <html>
 
 <head>  
-<title>放鬆區</title>
 <style>
 @import url（https://fonts.googleapis.com/earlyaccess/notosanstc.css）;
   
@@ -19,7 +18,8 @@ z-index:999;
 left:0;
 box-shadow: 0px 4px 8px 0px rgba(62,109,156,0.1);
 background-color:white;
-height:50px
+height:50px;
+display:table;
 }
   
 .header-button{
@@ -62,27 +62,93 @@ text-align:left;
 height:100px;    
 }
 
-  
-.music-phone{
-display:none;
-}
-  
-.music{
-display:table;
-}
-  
-@media screen and (max-width: 768px){
-.music{
-display:none;
-}
-  
-.music-phone{
-display:table;
+.music-list{
+padding:25px;
 }
 
+.music-name{
+font-size:20px;
+margin:0px 0px 40px;
+}
+
+.music-player{
+width:100%;
+box-shadow: 4px 4px 8px 0px rgba(62,109,156,0.3),
+            4px 4px 8px 0px white;
+border-radius:20px;
+margin:0px 0px 5px;
 }
   
+.delete{
+float:right;
+font-weight:bold;
+background-color:transparent;
+border:none;
+} 
   
+.delete:hover{
+transform:scale(1.2)
+} 
+  
+form{
+padding:25px;
+}
+
+
+  
+
+.menu {
+  text-align:center;
+  position:fixed;
+  top: 0;
+  left: -200px; /* hide the menu by moving it off-screen */
+  width: 200px;
+  height: 100%;
+  transition: all 0.3s ease;
+  background-color:white;
+  z-index:998;
+  box-shadow: 4px 0px 8px 0px rgba(62,109,156,0.1);
+}
+
+.menu.active {
+  left: 0; /* reveal the menu by moving it back onto the screen */
+}
+
+.menu-btn {
+  position: fixed;
+  left:0px; /* position the button next to the menu */
+  top:0px;
+  margin:10px;
+  z-index:999;
+  width:25px;
+  filter: drop-shadow(0px 0px 3px white);
+}
+
+.menu-btn:focus + .menu {
+  left: 0; /* reveal the menu when the button is focused (clicked or tabbed to) */
+}
+
+.menu-font{
+margin:20px;
+background-color:transparent;
+border:none;
+font-size:18px;
+color:black;
+}
+  
+.menu-phone{
+display:none;
+}
+
+@media screen and (max-width: 768px){
+header{
+display:none;
+} 
+  
+.menu-phone{
+display:block;
+}
+
   
   
 </style>
@@ -117,7 +183,29 @@ display:table;
 </tr>
 </table>
 </header>
+<div class="menu-phone">
+<img class="menu-btn" src="https://lh3.googleusercontent.com/nqi_lssjmdZAkGuVtUM9nVT0Q1-tfXwnXHh1YQZvrbHm0tonwDJ0qzfd15qlpPbuu8uAKHA75-_pcv2VN3Mkzzgcp1tyMOX9D8xFOza8YtA4xVbrGoPaCQOOBFLRNeDMCzYjx4oIzWeoTt8iCd96MAFw0VxnXCudX4bhIcw3tj5WwgLEqoTssv8GUdJc0QrAFij1cu3GG-eD9AuSf_L84rgstPtLzaMlz2Ckk8sHcfrx2GUGrnHMRpja18bczfPf6QH3F6w-8tqjhld2ZmuXqRteHuCyPvsSLsapUcyx14WIJOvxxN8EeIBZacfGhuUJsZJTwG6cH4Jj3K8zW3yZHXB5u1BmtQBT3fzEv71I0jHx9k3UeGEUzr8N9uwYwlJ919egEs0TLSwlJCQXbCeSYe_FJAkTR8twxw3ZaRN9obKIjpaJAGULmXeriwL1rzjlPW6kiKguE5WLBmnez7CjYqaDI4xuX3mV-N2oL1NH5Y-b3MAenwRCUWtvI9JTnoJsbtMCVTNZQSUOgfDdEH1011hg1YpqklNj4fhm7OQDEEERmi04RNUsp5LUp1hrMly1u8PwWJMDlbolHMjDNSFHF3MmE2SS0DvnZ1Wv6ar_u3wMaI6c7iwPBuYoUqq4PotbCmGwExNr1rXfQkd9mawT1GX7Aml9DCYLiJQdsyCYoG0Nmo23akjX9UwkiwlezP8uYyQeWPCFx1NOrBmNWK9V_lcvWC6nn58wnKLQdxjLJJERqnE6pSuTpT_Dm5iKpak2Qz9kWsz-e7nAQxdBhEAfC_CL9n70PaR8FsC6ZkmNSMkIGFRdFqBZGJ7DscejnDyP78evq2tNWvhsI0-fx80jKeJ5fMBH-AttXb_dP8AVxivmh1GZ8H0ngC2TmmV6Q1GWYoFNI8O6jjdJGd2nG_a1Lc77uNz7yLzDGQhB9PJh3bd7aUB9GhgZP-tdAj6Uxtbwqg6IZEXgpylwys7vl54Rug=w512-h512-s-no?authuser=2"></img>
+<div class="menu">
+<button class="menu-font"></button><br>
+
+<button class="menu-font">主頁</button><br>
   
+<a href="../../function/question.html">
+<button class="menu-font">題庫</button><br></a>
+  
+<a href="../../function/tool.html">
+<button class="menu-font">工具</button><br></a>
+
+<a href="../../function/topic.html">
+<button class="menu-font">課題</button><br></a>
+
+<a href="../../function/quiz.html">
+<button class="menu-font">測驗</button><br></a>
+
+<a href="../../function/about-us.html">
+<button class="menu-font">關於我們</button></a>
+</div>
+</div>
 <br><br><br>
   
 <table class="introduce">
@@ -152,68 +240,133 @@ display:table;
   
 </tr>
 </table><br>
+	<form>
+		<label style="font-size:18px" for="fileupload">選擇音頻文件：</label>
+		<input type="file" id="fileupload" name="fileupload">
+    <input style="float:right"type="button" id="upload" value="上傳" onclick="uploadFile()">
+	</form>
+	<br>
   
+<div class="music-list" id="music-list"></div>
+  
+<div style="padding:25px">
+  
+<div>
+<audio class="music-player" controls>
+<source src=""> 
+</audio>
+<font class="music-name">海洋小夜曲 Ocean Serenade</font><div style="margin:40px"></div>
+</div>
+<div>
+<audio class="music-player" controls>
+<source src=""> 
+</audio>
+<font class="music-name">月之搖籃曲 Lunar Lullaby</font><div style="margin:40px"></div>
+</div>
+<div>
+<audio class="music-player" controls>
+<source src=""> 
+</audio>
+<font class="music-name">日落交響曲 Sunset Symphony
+</font><div style="margin:40px"></div>
+</div>
+<div>
+<audio class="music-player" controls>
+<source src=""> 
+</audio>
+<font class="music-name">雲景夢 Cloudscape Dreams</font><div style="margin:40px"></div>
+</div>
+<div>
+<audio class="music-player" controls>
+<source src=""> 
+</audio>
+<font class="music-name">森林禪 Forest Zen</font><div style="margin:40px"></div>
+</div>
+<div>
+<audio class="music-player" controls>
+<source src=""> 
+</audio>
+<font class="music-name">欣快綠洲 Euphoric Oasis</font><div style="margin:40px"></div>
+</div>
+<div>
+<audio class="music-player" controls>
+<source src=""> 
+</audio>
+<font class="music-name">織夢機 Dreamweaver Harmony</font><div style="margin:40px"></div>
+</div>
+<div>
+<audio class="music-player" controls>
+<source src=""> 
+</audio>
+<font class="music-name">靜潮 Tranquil Tide</font><div style="margin:40px"></div>
+</div>
+<div>
+<audio class="music-player" controls>
+<source src=""> 
+</audio>
+<font class="music-name">天體舒緩 Celestial Soothing</font><div style="margin:40px"></div>
+</div>
+<div>
+<audio class="music-player" controls>
+<source src=""> 
+</audio>
+<font class="music-name">沉沒的寧靜 Sunkissed Serenity</font><div style="margin:40px"></div>
+</div>
 
-  
-<table class="music" width=100%>
-<tr>
-<td><iframe width=100% frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1461721226&auto=0&height=32"></iframe></td>
-  
-<td><iframe width=100% frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1928007367&auto=0&height=32"></iframe></td>
-</tr>
-
-<tr>
-<td><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="//music.163.com/outchain/player?type=2&id=1475413346&auto=0&height=32"></iframe></td>
-<td><iframe width=100% frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1461720451&auto=0&height=32"></iframe></td>
-</tr>
-  
-  
-<tr>
-<td><iframe width=100% frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1928008831&auto=0&height=32"></iframe></td>
-  
-<td><iframe width=100% frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1928007379&auto=0&height=32"></iframe></td>
-</tr>
-
-<tr>
-<td><iframe width=100% frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1475413347&auto=0&height=32"></iframe></td>
-<td><iframe width=100% frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1453866264&auto=0&height=32"></iframe></td>
-</tr>  
-
-  
-<tr>
-<td><iframe width=100% frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1358554364&auto=0&height=32"></iframe></td>
-<td><iframe width=100% frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1358554366&auto=0&height=32"></iframe></td>
-</tr>
-  
-</table>
-<table class="music-phone" width=100%>
-<tr><td><iframe width=100% frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1461721226&auto=0&height=32"></iframe></td></tr>
-  
-<tr><td><iframe width=100% frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1928007367&auto=0&height=32"></iframe></td></tr>
-
-<tr><td><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="//music.163.com/outchain/player?type=2&id=1475413346&auto=0&height=32"></iframe></td></tr>
-
-<tr><td><iframe width=100% frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1461720451&auto=0&height=32"></iframe></td></tr>
-
-  
-<tr><td><iframe width=100% frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1928008831&auto=0&height=32"></iframe></td></tr>
-  
-<tr><td><iframe width=100% frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1928007379&auto=0&height=32"></iframe></td></tr>
-
-<tr><td><iframe width=100% frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1475413347&auto=0&height=32"></iframe></td></tr>
-
-<tr><td><iframe width=100% frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1453866264&auto=0&height=32"></iframe></td></tr>  
-
-  
-<tr><td><iframe width=100% frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1358554364&auto=0&height=32"></iframe></td></tr>
-
-<tr><td><iframe width=100% frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1358554366&auto=0&height=32"></iframe></td></tr>
-  
-</table>
-  
-  
-  
-  
+</div>
 </body> 
   
+  
+<script>
+    
+    let musicList = [];
+
+function uploadFile() {
+    let input = document.getElementById('fileupload');
+    let file = input.files[0];
+
+    let music = {
+        name: file.name,
+        url: URL.createObjectURL(file)
+    };
+
+    musicList.push(music);
+
+    let playerDiv = document.createElement('div');
+    let audioElement = document.createElement('audio');
+    audioElement.setAttribute('src', music.url);
+    audioElement.setAttribute('controls', true);
+    audioElement.setAttribute('loop', true);
+    audioElement.setAttribute('class', 'music-player');
+    playerDiv.appendChild(audioElement);
+
+    let nameElement = document.createElement('font');
+    nameElement.innerText = music.name;
+    playerDiv.appendChild(nameElement);
+    playerDiv.setAttribute('class', 'music-name');
+
+    let deleteButton = document.createElement('input');
+    deleteButton.setAttribute('type', 'button');
+    deleteButton.setAttribute('value', '╳');
+    deleteButton.setAttribute('class', 'delete');
+    deleteButton.onclick = function() {
+        let index = musicList.indexOf(music);
+        musicList.splice(index, 1);
+        playerDiv.remove();
+    }
+    playerDiv.appendChild(deleteButton);
+
+    document.getElementById('music-list').appendChild(playerDiv);
+
+}
+  
+  
+  const menuBtn = document.querySelector('.menu-btn');
+  const menu = document.querySelector('.menu');
+  
+  // toggle active class on menu when button is clicked
+  menuBtn.addEventListener('click', function() {
+    menu.classList.toggle('active');
+  });
+</script>
 </html>
