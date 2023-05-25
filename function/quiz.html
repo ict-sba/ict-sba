@@ -185,6 +185,35 @@ color:black;
 display:none;
 }
 
+
+
+
+.calc{
+right:-310px;
+bottom:0px;
+position:fixed;
+transition:0.3s
+}
+
+.calc.active{
+right:0px;
+transition:0.3s
+}
+
+.calc-btn{
+font-size:30px;
+border:none;
+padding:10px;
+background-color:transparent;
+}
+
+.calc-btn:focus + .calc {
+  right: 0; /* reveal the menu when the button is focused (clicked or tabbed to) */
+}
+
+
+
+
 @media screen and (max-width: 768px){
 header{
 display:none;
@@ -259,6 +288,13 @@ display:block;
 <button class="menu-font">關於我們</button></a>
 </div>
 </div>
+
+
+<div class="calc">
+<button class="calc-btn">⚙</button>
+<iframe style="height:100vh;  transform: translateY(15px);" src="https://www.desmos.com/scientific?lang=zh-TW"></iframe>
+</div>
+
 <br><br><br>
   
 <table class="introduce">
@@ -612,6 +648,15 @@ display:block;
 
 </script>  
   
+<script>
+const calcBtn = document.querySelector('.calc-btn');
+  const calc = document.querySelector('.calc');
+  
+  // toggle active class on menu when button is clicked
+  calcBtn.addEventListener('click', function() {
+    calc.classList.toggle('active');
+  });
+</script>  
   
 </body>
 </html>
