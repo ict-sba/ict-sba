@@ -1,0 +1,425 @@
+
+<html>
+  
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content=" width=device-width, initial-scale=1.0">
+<title>網絡欺「零」</title>
+  
+<style>
+@import url（https://fonts.googleapis.com/earlyaccess/notosanstc.css）;
+
+body{
+font-family:'Noto Sans TC',sans-serif;
+margin:0px;
+padding:0px;
+}
+
+
+.menu-btn{
+font-weight: bold;
+z-index:6; 
+color:gray;
+padding:20px;
+font-size:20px;
+top:0px;
+position:fixed;
+font-size:25px;
+display:inline-block;
+transform: rotate(90deg) scalex(1.2);
+}
+
+.title{
+font-size:50px;
+font-weight: bold;
+}
+
+.title-010{
+z-index:1;
+font-size: 10px;
+color:gray;
+position:absolute;
+top:10px;
+right:0px;
+}
+  
+.block-title{
+background-color:black;
+color:#ccff00;
+padding:55px;
+}
+  
+.block-bottom{
+background-color:#cea5ad;
+color:#ccff00;
+padding:55px;
+}
+  
+.block{
+background-color:white;
+margin:35px;
+padding:20px;
+border-radius:15px;
+}
+ 
+.learnmore{
+font-size:13px;
+background-color:black;
+color:white;
+padding:8px 10px;
+border-radius:20px;
+font-weight: bold;
+float:right;
+}
+
+.name {
+z-index:1;
+display: inline-block;
+padding: 5px;
+background-color:rgba(204,255,0,0.5);
+position:relative;
+font-size:20px;
+font-weight: bold;
+color:black;
+box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.note {
+font-weight: bold;
+border-radius:3px;
+text-align:left;
+z-index:-999;
+width: 200px;
+min-height: 180px;
+padding: 20px;
+background-color: white;
+background: linear-gradient(0deg, 
+rgb(233,233,233) 0%, 
+rgb(244,244,244) 20%);
+box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+transform: translateY(-10px);
+}
+
+.wish{
+display:inline-block;
+padding:20px;
+}
+
+.card {
+text-align: center;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+footer{
+color:#ccff00;
+background-color:black;
+padding:30px;
+}
+
+.block-con {
+vertical-align:top;
+color:black;
+background-color:white;
+padding:20px;
+border-radius:15px;
+width:200px;
+min-height: 300px;
+display:inline-block;
+white-space: normal; 
+}
+
+.container {
+border: none;
+overflow-x: scroll;
+overflow-y: hidden;
+white-space: nowrap; /* 強制子元素不換行的屬性可以保留 */
+scroll-snap-type: x mandatory;
+width:100%;
+}
+
+
+
+
+
+
+
+.menu {
+  box-shadow: 5px 0px 15px rgba(0,0,0,0.2);
+  background-color:rgba(255,255,255,0.4);
+  background-size: 3px 3px;
+  backdrop-filter: saturate(50%) blur(9px);
+  -webkit-backdrop-filter: saturate(50%) blur(9px);
+  text-align:center;
+  position:fixed;
+  top: 0;
+  left: -220px; 
+  width: 200px;
+  height: 100%;
+  transition: all 0.3s ease;
+  z-index:5;
+}
+
+.menu.active {
+  left: 0; /* reveal the menu by moving it back onto the screen */
+}
+
+.menu-btn:focus + .menu {
+  left: 0; /* reveal the menu when the button is focused (clicked or tabbed to) */
+}
+
+.font-menu-btn{
+font-size:18px;
+font-weight: bold;
+}
+
+.block-top-img{
+width:60%;
+}
+  
+@media screen and (max-width: 768px){
+.block-top-img{
+width:100%;
+}
+}
+</style>
+</head>
+  
+  
+<body>
+<div class="menu-btn">|||</div>
+<div class="menu">
+
+<br><br><br>
+<font class="font-menu-btn">主頁</font><br><br>
+<font class="font-menu-btn">
+<details>
+<summary>網絡欺淩種類</summary>
+<div style="text-align:left; transform: translateX(30px);">
+<ul>
+<li>網絡騷擾</li>
+<li>網絡詆毀</li>
+<li>網絡滲透</li>
+<li>網絡剝削</li>
+<li>網絡身份欺詐</li>
+<li>網絡報復</li>
+</ul>
+</div>
+</details>
+</font><br>
+  
+<font class="font-menu-btn">網絡欺淩影響</font><br><br>
+<font class="font-menu-btn">預防和應對策略</font><br><br>
+<font class="font-menu-btn">宗旨</font>
+  
+</div>
+  
+<!--標題-->  
+<div class="block-title">
+<p class="title" style="position:sticky;z-index:2;">網絡欺淩</p>
+<h3 style="position:sticky;z-index:2;">指的是使用互聯網和數字技術對個人或群體進行攻擊、威脅、騷擾、詆毀、誹謗或剝削的行為。<br>
+以下是常見的網絡欺淩種類：
+</h2>
+<div class="title-010">
+<pre>
+          _____                _____                    _____                    _____                    _____                    _____                    _____                    _____            _____        _____                    _____                    _____                    _____          
+         /\    \              |\    \                  /\    \                  /\    \                  /\    \                  /\    \                  /\    \                  /\    \          /\    \      |\    \                  /\    \                  /\    \                  /\    \         
+        /::\    \             |:\____\                /::\    \                /::\    \                /::\    \                /::\    \                /::\____\                /::\____\        /::\____\     |:\____\                /::\    \                /::\____\                /::\    \        
+       /::::\    \            |::|   |               /::::\    \              /::::\    \              /::::\    \              /::::\    \              /:::/    /               /:::/    /       /:::/    /     |::|   |                \:::\    \              /::::|   |               /::::\    \       
+      /::::::\    \           |::|   |              /::::::\    \            /::::::\    \            /::::::\    \            /::::::\    \            /:::/    /               /:::/    /       /:::/    /      |::|   |                 \:::\    \            /:::::|   |              /::::::\    \      
+     /:::/\:::\    \          |::|   |             /:::/\:::\    \          /:::/\:::\    \          /:::/\:::\    \          /:::/\:::\    \          /:::/    /               /:::/    /       /:::/    /       |::|   |                  \:::\    \          /::::::|   |             /:::/\:::\    \     
+    /:::/  \:::\    \         |::|   |            /:::/__\:::\    \        /:::/__\:::\    \        /:::/__\:::\    \        /:::/__\:::\    \        /:::/    /               /:::/    /       /:::/    /        |::|   |                   \:::\    \        /:::/|::|   |            /:::/  \:::\    \    
+   /:::/    \:::\    \        |::|   |           /::::\   \:::\    \      /::::\   \:::\    \      /::::\   \:::\    \      /::::\   \:::\    \      /:::/    /               /:::/    /       /:::/    /         |::|   |                   /::::\    \      /:::/ |::|   |           /:::/    \:::\    \   
+  /:::/    / \:::\    \       |::|___|______    /::::::\   \:::\    \    /::::::\   \:::\    \    /::::::\   \:::\    \    /::::::\   \:::\    \    /:::/    /      _____    /:::/    /       /:::/    /          |::|___|______    ____    /::::::\    \    /:::/  |::|   | _____    /:::/    / \:::\    \  
+ /:::/    /   \:::\    \      /::::::::\    \  /:::/\:::\   \:::\ ___\  /:::/\:::\   \:::\    \  /:::/\:::\   \:::\____\  /:::/\:::\   \:::\ ___\  /:::/____/      /\    \  /:::/    /       /:::/    /           /::::::::\    \  /\   \  /:::/\:::\    \  /:::/   |::|   |/\    \  /:::/    /   \:::\ ___\ 
+/:::/____/     \:::\____\    /::::::::::\____\/:::/__\:::\   \:::|    |/:::/__\:::\   \:::\____\/:::/  \:::\   \:::|    |/:::/__\:::\   \:::|    ||:::|    /      /::\____\/:::/____/       /:::/____/           /::::::::::\____\/::\   \/:::/  \:::\____\/:: /    |::|   /::\____\/:::/____/  ___\:::|    |
+\:::\    \      \::/    /   /:::/~~~~/~~      \:::\   \:::\  /:::|____|\:::\   \:::\   \::/    /\::/   |::::\  /:::|____|\:::\   \:::\  /:::|____||:::|____\     /:::/    /\:::\    \       \:::\    \          /:::/~~~~/~~      \:::\  /:::/    \::/    /\::/    /|::|  /:::/    /\:::\    \ /\  /:::|____|
+ \:::\    \      \/____/   /:::/    /          \:::\   \:::\/:::/    /  \:::\   \:::\   \/____/  \/____|:::::\/:::/    /  \:::\   \:::\/:::/    /  \:::\    \   /:::/    /  \:::\    \       \:::\    \        /:::/    /          \:::\/:::/    / \/____/  \/____/ |::| /:::/    /  \:::\    /::\ \::/    / 
+  \:::\    \              /:::/    /            \:::\   \::::::/    /    \:::\   \:::\    \            |:::::::::/    /    \:::\   \::::::/    /    \:::\    \ /:::/    /    \:::\    \       \:::\    \      /:::/    /            \::::::/    /                   |::|/:::/    /    \:::\   \:::\ \/____/  
+   \:::\    \            /:::/    /              \:::\   \::::/    /      \:::\   \:::\____\           |::|\::::/    /      \:::\   \::::/    /      \:::\    /:::/    /      \:::\    \       \:::\    \    /:::/    /              \::::/____/                    |::::::/    /      \:::\   \:::\____\    
+    \:::\    \           \::/    /                \:::\  /:::/    /        \:::\   \::/    /           |::| \::/____/        \:::\  /:::/    /        \:::\__/:::/    /        \:::\    \       \:::\    \   \::/    /                \:::\    \                    |:::::/    /        \:::\  /:::/    /    
+     \:::\    \           \/____/                  \:::\/:::/    /          \:::\   \/____/            |::|  ~|               \:::\/:::/    /          \::::::::/    /          \:::\    \       \:::\    \   \/____/                  \:::\    \                   |::::/    /          \:::\/:::/    /     
+      \:::\    \                                    \::::::/    /            \:::\    \                |::|   |                \::::::/    /            \::::::/    /            \:::\    \       \:::\    \                            \:::\    \                  /:::/    /            \::::::/    /      
+       \:::\____\                                    \::::/    /              \:::\____\               \::|   |                 \::::/    /              \::::/    /              \:::\____\       \:::\____\                            \:::\____\                /:::/    /              \::::/    /       
+        \::/    /                                     \::/____/                \::/    /                \:|   |                  \::/____/                \::/____/                \::/    /        \::/    /                             \::/    /                \::/    /                \::/____/        
+         \/____/                                       ~~                       \/____/                  \|___|                   ~~                       ~~                       \/____/          \/____/                               \/____/                  \/____/                                  
+                                                                                                                                                                                                                                                                                                             
+</pre>
+</div>
+</div>
+  
+<!--網絡欺淩種類-->
+<div style="background-color:#bbbbbb;">
+<br>
+  
+<div class="block" id="top">
+
+<h1>網絡騷擾</h1>
+<h3>通過電子郵件、社交媒體、網絡聊天室等途徑對個人或群體進行不斷的騷擾、威脅和恐嚇行為。</h3>
+  
+<div style="width:100%; text-align:center;">
+<img class="block-top-img" src="https://raw.githubusercontent.com/ict-sba/ict-sba.github.io/main/VASBA/img-vasba/ASCII-ART/ascii-art_001.png">
+</div>
+  
+<a href=""><span class="learnmore">了解更多</span></a><br><br><br>
+</div>
+  
+<div class="block" id="top">
+<h1>網絡詆毀</h1>
+<h3 style="color:gray;">通過在網絡上發布虛假的、貶低他人的信息或言論，對個人或群體進行名譽攻擊和誹謗。</h3>
+  
+<div style="width:100%; text-align:center;">
+<img class="block-top-img" src="https://raw.githubusercontent.com/ict-sba/ict-sba.github.io/main/VASBA/img-vasba/ASCII-ART/ascii-art_002.png">
+</div>
+  
+<a href=""><span class="learnmore">了解更多</span></a><br><br><br>
+</div>
+
+<div class="block" id="top">
+<h1>網絡滲透</h1>
+<h3 style="color:gray;">通過在網絡上發布虛假的、貶低他人的信息或言論，對個人或群體進行名譽攻擊和誹謗通過網絡攻擊、病毒攻擊等手段，入侵他人的電腦或網絡系統，盜取他人的信息或破壞他人的數據。</h3>
+<a href=""><span class="learnmore">了解更多</span></a><br><br><br>
+</div> 
+  
+<div class="block" id="top">
+<h1>網絡剝削</h1>
+<h3 style="color:gray;">通過網絡賭博、詐騙等手段，試圖從他人身上獲取金錢或獲利。</h3>
+<a href=""><span class="learnmore">了解更多</span></a><br><br><br>
+</div> 
+  
+<div class="block" id="top">
+<h1>網絡身份欺詐</h1>
+<h3 style="color:gray;">通過盜用他人的個人信息或身份證明文件，進行詐騙、犯罪或非法活動。</h3>
+<a href=""><span class="learnmore">了解更多</span></a><br><br><br>
+</div>  
+  
+<div class="block" id="top">
+<h1>網絡報復</h1>
+<h3 style="color:gray;">當個人或群體受到網絡欺淩後，對於欺淩者進行報復或報復性行為。</h3>
+<a href=""><span class="learnmore">了解更多</span></a><br><br><br>
+</div>
+<br><br>
+</div>
+<div class="block">
+<h1>以上是常見的網絡欺淩種類</h1>
+<h3 style="color:;">但實際上，網絡欺淩的形式和表現方式非常多樣化。<br>
+人們需要提高警惕，保護自己的個人信息和隱私，避免成為網絡欺淩的受害者。</h3>
+</div>
+  
+<!--網絡欺淩的影響-->
+<div style="background-color:#70aabc;padding:55px;">
+<h1 style="color:#ccff00">網絡欺淩的影響</h1>
+<div class="card" style="margin:10px; text-align:center">
+<div class="wish">
+<div class="name">心理健康</div>
+<div class="note">受害者可能會感到恐懼、焦慮、憤怒、沮喪、自卑等負面情緒。<br><br>
+長期受到網絡欺淩的影響，可能導致心理健康問題，如憂鬱症、焦慮症、自殺傾向等。</div>
+</div>
+<div class="wish">
+<div class="name">社交生活</div>
+<div class="note">受害者可能會因為網絡欺淩而遭到排斥和孤立，對社交生活產生負面影響。<br><br>
+同時，受害者可能會受到心理上的創傷，對人際關係產生恐懼和不信任，進一步影響社交能力。​</div>
+</div>
+<div class="wish">
+<div class="name">學業成績</div>
+<div class="note">受害者可能因為心理健康問題和注意力分散等原因而影響學業成績，<br><br>
+甚至可能導致學習成績下降、輟學等問題。</div>
+</div>
+<div class="wish">
+<div class="name">職業生涯</div>
+<div class="note">網絡欺淩可能對受害者的職業生涯產生負面影響，尤其是當網絡欺淩的內容涉及到工作場所和職業能力時。<br><br>
+受害者可能會因此失去工作機會、遭受工作場所的排斥和歧視等。</div>
+</div>
+</div>
+</div> 
+  
+<!--預防和應對策略-->
+<div class="block-bottom">
+<h1>預防和應對策略</h1>
+  
+<div class="container">
+<span class="block-con">
+<h2>保護個人信息</h2>
+<p>不要向陌生人透露個人信息，例如姓名、地址、電話號碼、電子郵件地址和社交媒體帳戶等。使用強密碼和雙因素驗證保護您的帳戶，並定期更改密碼。<br><br></p>
+</span>
+<span class="block-con">
+<h2>控制網絡使用</h2>
+<p>在社交媒體上設置隱私設置，限制誰可以看到您的帖子和個人信息。避免在公共Wi-Fi上輸入敏感信息，例如銀行帳戶信息或信用卡號碼。<br><br></p>
+</span>
+<span class="block-con">
+<h2>識別和預防</h2>
+<p>學會識別網絡欺淩的形式，例如騷擾、威脅、詐騙、誹謗和侮辱等。保持警惕，學會預防和避免危險情況，例如通過封鎖不良用戶、避免參與爭論和忽略惡意評論等。</p>
+</span>
+<span class="block-con">
+<h2>處理網絡欺淩事件</h2>
+<p>如果您受到網絡欺淩，不要回應或報復。保留證據，例如截圖和聊天記錄，並報告事件給網站管理員或當局。如果您感到不安或受到威脅，請立即報警或尋求支持和幫助。</p>
+</span>
+</div>
+  
+</div>
+  
+<!--宗旨-->
+<div style="background-color:#EEEEEE;padding:55px;">
+<h1 style="">宗旨</h1>
+<ul>
+<li><b>提倡尊重和禮貌</b><br>
+強調每個人都應該受到尊重和禮貌，無論他們是誰，他們的背景是什麼，或他們的觀點是什麼。</li><br>
+  
+<li><b>促進安全和健康的網絡環境</b><br>
+讓人們了解網絡欺淩的影響和危害，並提供資源和支持來幫助那些受到欺淩的人</li><br>
+  
+<li><b>建立社區和支持</b><br>
+鼓勵人們加入反對網絡欺淩的社區，並提供一個安全和支持的環境，讓他們可以分享自己的經驗，獲取支持和建議。</li><br>
+  
+<li><b>推廣教育和意識</b><br>
+教育人們如何識別和預防網絡欺淩，並提高公眾對這個問題的意識。</li>
+</ul>
+</div>
+  
+<footer>
+<details>
+<summary>關於我們</summary>
+<p>我是一名中學生，我正在進行我的校本評核功課。</p>
+</details><br>
+<details>
+<summary>宗旨</summary>
+<p>
+<ul>
+<li><b>提倡尊重和禮貌</b><br>
+強調每個人都應該受到尊重和禮貌，無論他們是誰，他們的背景是什麼，或他們的觀點是什麼。</li><br>
+  
+<li><b>促進安全和健康的網絡環境</b><br>
+讓人們了解網絡欺淩的影響和危害，並提供資源和支持來幫助那些受到欺淩的人</li><br>
+  
+<li><b>建立社區和支持</b><br>
+鼓勵人們加入反對網絡欺淩的社區，並提供一個安全和支持的環境，讓他們可以分享自己的經驗，獲取支持和建議。</li><br>
+  
+<li><b>推廣教育和意識</b><br>
+教育人們如何識別和預防網絡欺淩，並提高公眾對這個問題的意識。</li>
+</ul>
+</p>
+</details><br>
+<details>
+<summary>支援 </summary>
+<p>mmmmmmmmmmmmmmmm</p>
+</details>
+</footer> 
+
+
+<script>
+
+  const menuBtn = document.querySelector('.menu-btn');
+  const menu = document.querySelector('.menu');
+  
+  // toggle active class on menu when button is clicked
+  menuBtn.addEventListener('click', function() {
+    menu.classList.toggle('active');
+  });
+  </script>
+
+
+</body>
+
+  
+</html>
