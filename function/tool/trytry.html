@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>歌詞滾動音樂播放器</title>
+  <style>
+    #lyrics {
+      height: 200px;
+      overflow: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>歌詞滾動音樂播放器</h1>
+  
+  <audio id="audioPlayer" controls>
+    <source src="../../../audio/海洋小夜曲 Ocean Serenade.mp3"> 
+  </audio>
+
+  <div id="lyrics">
+    <ul id="lyricsList">
+      <li data-time="0:10">歌詞行1</li>
+      <li data-time="0:15">歌詞行2</li>
+      <li data-time="0:20">歌詞行3</li>
+      <li data-time="0:25">歌詞行4</li>
+      <!-- 添加更多歌詞行 -->
+    </ul>
+  </div>
+
+  <script>
+    const lyricsList = document.getElementById("lyricsList");
+    const audioPlayer = document.getElementById("audioPlayer");
+
+    audioPlayer.addEventListener("timeupdate", function() {
+      const currentTime = formatTime(audioPlayer.currentTime);
+      const currentLyric = document.querySelector(`li[data-time="${currentTime}"]`);
+      
+      if (currentLyric) {
+        // 將當前歌詞滾動到可視區域
+        currentLyric.scrollIntoView();
+        
+        // 高亮顯示當前歌詞
+        const activeLyrics = document.querySelectorAll(".active");
+        activeLyrics.forEach((lyric) => {
+          lyric.classList.remove("active");
+        });
+        currentLyric.classList.add("active");
+      }
+    });
+
+    // 將歌曲時間轉換為分:秒的格式
+    function formatTime(time) {
+      const minutes = Math.floor(time / 60);
+      const seconds = Math.floor(time % 60);
+      return `${padZero(minutes)}:${padZero(seconds)}`;
+    }
+
+    // 在小於10的數字前補零
+    function padZero(number) {
+      return number < 10 ? `0${number}` : number;
+    }
+  </script>
+</body>
+</html>
