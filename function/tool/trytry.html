@@ -7,6 +7,10 @@
       height: 200px;
       overflow: auto;
     }
+
+    .active {
+      color: red;
+    }
   </style>
 </head>
 <body>
@@ -32,11 +36,11 @@
 
     audioPlayer.addEventListener("timeupdate", function() {
       const currentTime = formatTime(audioPlayer.currentTime);
-      const currentLyric = document.querySelector(`li[data-time="${currentTime}"]`);
+      const currentLyric = Array.from(lyricsList.children).find(lyric => lyric.getAttribute("data-time") === currentTime);
       
       if (currentLyric) {
         // 將當前歌詞滾動到可視區域
-        currentLyric.scrollIntoView();
+        currentLyric.scrollIntoView({ behavior: "smooth" });
         
         // 高亮顯示當前歌詞
         const activeLyrics = document.querySelectorAll(".active");
