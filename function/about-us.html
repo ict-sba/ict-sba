@@ -1,3 +1,4 @@
+
 <html>
 
 <head>  
@@ -128,6 +129,29 @@ color:black;
 .menu-phone{
 display:none;
 }
+  
+.submit{
+font-size:16px;
+transition: 0.2s;
+color:white;
+text-align:center;
+border:1px;
+border-radius:5px;
+padding:7px 18px;
+background-color:#3E6D9C;
+box-shadow:0px 0px 8px 4px rgba(62,109,156,0.1);
+}  
+
+.submit:active{
+transition: 0.2s;
+color:black;
+border-radius:5px;
+background-color:white;
+}  
+  
+.submit-align{
+text-align:right;
+  }
 
 @media screen and (max-width: 768px){
 header{
@@ -138,6 +162,25 @@ display:none;
 display:block;
 }
   
+.submit{
+width:100%;
+font-size:16px;
+transition: 0.2s;
+color:white;
+text-align:center;
+border:1px;
+border-radius:5px;
+padding:5px;
+background-color:#3E6D9C;
+box-shadow:0px 0px 8px 4px rgba(62,109,156,0.1);
+}  
+
+.submit:active{
+transition: 0.2s;
+color:black;
+border-radius:5px;
+background-color:white;
+}  
 </style>
 </head>
   
@@ -300,6 +343,32 @@ display:block;
 希望通過我的努力，能夠幫助更多學生獲取更好的學習成果和輝煌的未來。
 </font>
 </div><br> 
+  
+<div class="block">
+<font class="block-title">
+留言信箱
+</font><br><br>
+<form id="contactForm" style="font-size:18px;">
+    <label for="name">姓名:</label>
+    <input type="text" id="name" name="name" required style="font-size:16px;">
+    <br><br>
+    <label for="identity">身份:</label>
+    <select id="identity" name="identity" required style="font-size:16px;">
+      <option value="學生">學生</option>
+      <option value="老師">老師</option>
+      <option value="家長">家長</option>
+      <option value="其他">其他</option>
+    </select>
+    <br><br>
+    <label for="message">留言內容:</label>
+    <br>
+    <textarea id="message" name="message" required style="min-width:100%;max-width:100%;min-height:150px;font-size:16px;"></textarea>
+    <br><br>
+<div class="submit-align">
+    <input type="submit" value="提交" class="submit"></div>
+  
+  </form>
+</div><br> 
 </div><br>
 
 <script>
@@ -311,5 +380,33 @@ display:block;
     menu.classList.toggle('active');
   });
 </script>
+  
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      var name = document.getElementById("name").value;
+      var identity = document.getElementById("identity").value;
+      var message = document.getElementById("message").value;
+
+
+      var nameRegex = /^[\p{L}]+$/u;
+
+      if (!nameRegex.test(name)) {
+        alert("姓名只能包含文字，不能包含數字或其他字符。");
+        return;
+      }
+
+      var subject = "[" + name + "]於你的網站傳送了留言";
+      var body = "姓名: " + name + "\n";
+      body += "身份: " + identity + "\n";
+      body += "留言內容: " + message;
+
+      var mailLink = document.createElement("a");
+      mailLink.href = "mailto:rcc19131@rcphkmc.edu.hk?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      mailLink.click();
+    });
+  </script>
+  
 </body>
 </html>
