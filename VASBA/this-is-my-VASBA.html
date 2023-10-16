@@ -5,7 +5,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content=" width=device-width, initial-scale=1.0">
 <title>網絡欺「零」</title>
-  
 <style>
 @import url（https://fonts.googleapis.com/earlyaccess/notosanstc.css）;
 
@@ -14,7 +13,6 @@ font-family:'Noto Sans TC',sans-serif;
 margin:0px;
 padding:0px;
 }
-
 
 .menu-btn{
 font-weight: bold;
@@ -33,7 +31,6 @@ transform: rotate(90deg) scalex(1.2);
 font-size:50px;
 font-weight: bold;
 }
-
 .title-010{
 z-index:1;
 font-size: 10px;
@@ -42,26 +39,23 @@ position:absolute;
 top:10px;
 right:0px;
 }
-  
+
 .block-title{
 background-color:black;
 color:#ccff00;
 padding:55px;
 }
-  
 .block-bottom{
 background-color:#cea5ad;
 color:#ccff00;
 padding:55px;
 }
-  
 .block{
 background-color:white;
 margin:35px;
 padding:20px;
 border-radius:15px;
-}
- 
+} 
 .learnmore{
 font-size:13px;
 background-color:black;
@@ -70,6 +64,38 @@ padding:8px 10px;
 border-radius:20px;
 font-weight: bold;
 float:right;
+}
+
+#b01{
+background-image: url('https://raw.githubusercontent.com/ict-sba/ict-sba.github.io/main/VASBA/img-vasba/ASCII-ART/ascii-art_001.png');
+background-size: 100%;
+background-repeat: no-repeat;
+background-position: center;
+transition: all 2s;
+}
+
+#b01:hover{
+background-image: url('https://raw.githubusercontent.com/ict-sba/ict-sba.github.io/main/VASBA/img-vasba/ASCII-ART/ascii-art_001.png');
+background-size: 30%;
+background-repeat: no-repeat;
+background-position: 25% 75%;
+transition: all 0.3s;
+}
+
+#b02{
+background-image: url('https://raw.githubusercontent.com/ict-sba/ict-sba.github.io/main/VASBA/img-vasba/ASCII-ART/ascii-art_002.png');
+background-size: 100%;
+background-repeat: no-repeat;
+background-position: center;
+transition: all 2s;
+}
+
+#b02:hover{
+background-image: url('https://raw.githubusercontent.com/ict-sba/ict-sba.github.io/main/VASBA/img-vasba/ASCII-ART/ascii-art_002.png');
+background-size: 30%;
+background-repeat: no-repeat;
+background-position: 25% 75%;
+transition: all 0.3s;
 }
 
 .name {
@@ -83,7 +109,6 @@ font-weight: bold;
 color:black;
 box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
-
 .note {
 font-weight: bold;
 border-radius:3px;
@@ -99,12 +124,10 @@ rgb(244,244,244) 20%);
 box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
 transform: translateY(-10px);
 }
-
 .wish{
 display:inline-block;
 padding:20px;
 }
-
 .card {
 text-align: center;
 display: flex;
@@ -118,52 +141,44 @@ background-color:black;
 padding:30px;
 }
 
-  .block-con {
-    vertical-align: top;
-    color: black;
-    background-color: white;
-    padding: 20px;
-    border-radius: 15px;
-    width: 200px;
-    min-height: 300px;
-    display: inline-block;
-    white-space: normal;
-    scroll-snap-align: start; /* Add this line */
-  }
-
-  .container {
-    border: none;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    scroll-snap-type: x mandatory;
-    width: 100%;
-    transition: scroll 0.3s ease-in-out;
-  }
-  
-  .container::-webkit-scrollbar {
-  display: none;
+.block-con {
+vertical-align: top;
+color: black;
+background-color: white;
+padding: 20px;
+border-radius: 15px;
+width: 200px;
+min-height: 300px;
+display: inline-block;
+white-space: normal;
+scroll-snap-align: start; /* Add this line */
 }
-
+.container {
+border: none;
+overflow-x: scroll;
+overflow-y: hidden;
+white-space: nowrap;
+scroll-snap-type: x mandatory;
+width: 100%;
+transition: scroll 0.3s ease-in-out;
+} 
+.container::-webkit-scrollbar {
+display: none;
+}
 .container{
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+-ms-overflow-style: none;
+scrollbar-width: none;
+}
+.scroll-button {
+width:40px;
+height:40px;
+background-color: black;
+color:white;
+border:none;
+border-radius:50%;
+margin: 10px;
+cursor: pointer;
   }
-
- .scroll-button {
-    width:40px;
-    height:40px;
-    background-color: black;
-    color:white;
-    border:none;
-    border-radius:50%;
-    margin: 10px;
-    cursor: pointer;
-  }
-
-
-
-
 
 .menu {
   box-shadow: 5px 0px 15px rgba(0,0,0,0.2);
@@ -180,29 +195,24 @@ padding:30px;
   transition: all 0.3s ease;
   z-index:5;
 }
-
 .menu.active {
   left: 0; /* reveal the menu by moving it back onto the screen */
 }
-
 .menu-btn:focus + .menu {
   left: 0; /* reveal the menu when the button is focused (clicked or tabbed to) */
 }
-
 .font-menu-btn{
 font-size:18px;
 font-weight: bold;
 }
-
 .block-top-img{
 width:60%;
 filter: brightness(1.08);
-}
-  
+}  
 #block-top-img3{
 width:30%;
 }
-  
+
 .submit{
 font-size:16px;
 transition: 0.2s;
@@ -214,22 +224,20 @@ padding:7px 18px;
 background-color:#ccff00;
 box-shadow:0px 0px 8px 4px rgba(62,109,156,0.1);
 }  
-
 .submit:active{
 transition: 0.2s;
 color:black;
 border-radius:5px;
 background-color:white;
-}  
+} 
+
 @media screen and (max-width: 768px){
 .block-top-img{
 width:100%;
 }
-  
 #block-top-img3{
 width:80%;
-} 
-  
+}   
 .submit{
 width:100%;
 font-size:16px;
@@ -242,7 +250,6 @@ padding:5px;
 background-color:#ccff00;
 box-shadow:0px 0px 8px 4px rgba(62,109,156,0.1);
 }  
-
 .submit:active{
 transition: 0.2s;
 color:black;
@@ -251,8 +258,8 @@ background-color:white;
 } 
 }
 </style>
+
 </head>
-  
   
 <body>
 <div class="menu-btn">|||</div>
@@ -318,36 +325,26 @@ background-color:white;
 <div style="background-color:#bbbbbb;">
 <br>
   
-<div class="block" id="top">
+<div class="block" id="b01">
 
 <h1>網絡騷擾</h1>
-<h3>通過電子郵件、社交媒體、網絡聊天室等途徑對個人或群體進行不斷的騷擾、威脅和恐嚇行為。</h3>
-  
-<div style="width:100%; text-align:center;">
-<img class="block-top-img" src="https://raw.githubusercontent.com/ict-sba/ict-sba.github.io/main/VASBA/img-vasba/ASCII-ART/ascii-art_001.png">
-</div>
-  
+<h3 style="color:gray;">通過電子郵件、社交媒體、網絡聊天室等途徑對個人或群體進行不斷的騷擾、威脅和恐嚇行為。</h3>
 <a href=""><span class="learnmore">了解更多</span></a><br><br><br>
 </div>
   
-<div class="block" id="top">
+<div class="block" id="b02">
 <h1>網絡詆毀</h1>
 <h3 style="color:gray;">通過在網絡上發布虛假的、貶低他人的信息或言論，對個人或群體進行名譽攻擊和誹謗。</h3>
-  
-<div style="width:100%; text-align:center;">
-<img class="block-top-img" src="https://raw.githubusercontent.com/ict-sba/ict-sba.github.io/main/VASBA/img-vasba/ASCII-ART/ascii-art_002.png">
-</div>
-  
 <a href=""><span class="learnmore">了解更多</span></a><br><br><br>
 </div>
   
-<div class="block" id="top">
+<div class="block" id="b03">
 <h1>網絡身份欺詐</h1>
 <h3 style="color:gray;">通過盜用他人的個人信息或身份證明文件，進行詐騙、犯罪或非法活動。</h3>
 <a href=""><span class="learnmore">了解更多</span></a><br><br><br>
 </div>  
   
-<div class="block" id="top">
+<div class="block" id="b04">
 <h1>網絡報復</h1>
 <h3 style="color:gray;">當個人或群體受到網絡欺淩後，對於欺淩者進行報復或報復性行為。</h3>
 <a href=""><span class="learnmore">了解更多</span></a><br><br><br>
@@ -559,7 +556,18 @@ function scrollContainer(direction) {
       mailLink.click();
     });
   </script>
+<script>
+var elements = document.getElementsByClassName('block');
 
+Array.from(elements).forEach(function(element) {
+  element.addEventListener('mousemove', function(event) {
+    var xPos = (event.clientX / window.innerWidth) * 100;
+    var yPos = (event.clientY / window.innerHeight) * 100;
+
+    element.style.backgroundPosition = xPos + '% ' + yPos + '%';
+  });
+});
+</script>
 
 </body>
 
