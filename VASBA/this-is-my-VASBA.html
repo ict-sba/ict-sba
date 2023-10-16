@@ -202,6 +202,25 @@ filter: brightness(1.08);
 #block-top-img3{
 width:30%;
 }
+  
+.submit{
+font-size:16px;
+transition: 0.2s;
+color:black;
+text-align:center;
+border:1px;
+border-radius:5px;
+padding:7px 18px;
+background-color:#ccff00;
+box-shadow:0px 0px 8px 4px rgba(62,109,156,0.1);
+}  
+
+.submit:active{
+transition: 0.2s;
+color:black;
+border-radius:5px;
+background-color:white;
+}  
 @media screen and (max-width: 768px){
 .block-top-img{
 width:100%;
@@ -209,6 +228,26 @@ width:100%;
   
 #block-top-img3{
 width:80%;
+} 
+  
+.submit{
+width:100%;
+font-size:16px;
+transition: 0.2s;
+color:black;
+text-align:center;
+border:1px;
+border-radius:5px;
+padding:5px;
+background-color:#ccff00;
+box-shadow:0px 0px 8px 4px rgba(62,109,156,0.1);
+}  
+
+.submit:active{
+transition: 0.2s;
+color:black;
+border-radius:5px;
+background-color:white;
 } 
 }
 </style>
@@ -228,8 +267,6 @@ width:80%;
 <ul>
 <li>網絡騷擾</li>
 <li>網絡詆毀</li>
-<li>網絡滲透</li>
-<li>網絡剝削</li>
 <li>網絡身份欺詐</li>
 <li>網絡報復</li>
 </ul>
@@ -303,23 +340,6 @@ width:80%;
   
 <a href=""><span class="learnmore">了解更多</span></a><br><br><br>
 </div>
-
-<div class="block" id="top">
-<h1>網絡滲透</h1>
-<h3 style="color:gray;">通過在網絡上發布虛假的、貶低他人的信息或言論，對個人或群體進行名譽攻擊和誹謗通過網絡攻擊、病毒攻擊等手段，入侵他人的電腦或網絡系統，盜取他人的信息或破壞他人的數據。</h3>
-  
-<div style="width:100%; text-align:center;">
-<img id="block-top-img3" class="block-top-img" src="https://raw.githubusercontent.com/ict-sba/ict-sba.github.io/main/VASBA/img-vasba/ASCII-ART/ascii-art_003.png">
-</div>
-  
-<a href=""><span class="learnmore">了解更多</span></a><br><br><br>
-</div> 
-  
-<div class="block" id="top">
-<h1>網絡剝削</h1>
-<h3 style="color:gray;">通過網絡賭博、詐騙等手段，試圖從他人身上獲取金錢或獲利。</h3>
-<a href=""><span class="learnmore">了解更多</span></a><br><br><br>
-</div> 
   
 <div class="block" id="top">
 <h1>網絡身份欺詐</h1>
@@ -411,8 +431,32 @@ width:80%;
     <button class="scroll-button" onclick="scrollContainer('right')">→</button>
   </div>
 </div>
-
   
+<!--留言信箱-->
+<div style="background-color:#333333" class="block-bottom">
+<h1>留言信箱</h1>
+<form id="contactForm" style="font-size:18px;">
+    <label for="name">姓名:</label>
+    <input type="text" id="name" name="name" required style="font-size:16px;">
+    <br><br>
+    <label for="identity">身份:</label>
+    <select id="identity" name="identity" required style="font-size:16px;">
+      <option value="學生">學生</option>
+      <option value="老師">老師</option>
+      <option value="家長">家長</option>
+      <option value="其他">其他</option>
+    </select>
+    <br><br>
+    <label for="message">留言內容:</label>
+    <br>
+    <textarea id="message" name="message" required style="min-width:100%;max-width:100%;min-height:150px;font-size:16px;"></textarea>
+    <br><br>
+<div class="submit-align">
+    <input type="submit" value="提交" class="submit"></div>
+  
+  </form>
+</div><br> 
+
 <!--宗旨-->
 <div style="background-color:#ffffff;padding:55px;">
 <h1 style="">宗旨</h1>
@@ -471,7 +515,6 @@ width:80%;
     menu.classList.toggle('active');
   });
 </script>
-  
 <script>
 function scrollContainer(direction) {
     const container = document.querySelector('.container');
@@ -490,6 +533,32 @@ function scrollContainer(direction) {
     }
   }
 </script>
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      var name = document.getElementById("name").value;
+      var identity = document.getElementById("identity").value;
+      var message = document.getElementById("message").value;
+
+
+      var nameRegex = /^[\p{L}]+$/u;
+
+      if (!nameRegex.test(name)) {
+        alert("姓名只能包含文字，不能包含數字或其他字符。");
+        return;
+      }
+
+      var subject = "[" + name + "]於你的VASBA網站傳送了留言";
+      var body = "姓名: " + name + "\n";
+      body += "身份: " + identity + "\n";
+      body += "留言內容: " + message;
+
+      var mailLink = document.createElement("a");
+      mailLink.href = "mailto:rcc19131@rcphkmc.edu.hk?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      mailLink.click();
+    });
+  </script>
 
 
 </body>
