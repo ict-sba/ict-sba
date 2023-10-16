@@ -1,3 +1,4 @@
+
 <html>
   
 <head>
@@ -117,28 +118,48 @@ background-color:black;
 padding:30px;
 }
 
-.block-con {
-vertical-align:top;
-color:black;
-background-color:white;
-padding:20px;
-border-radius:15px;
-width:200px;
-min-height: 300px;
-display:inline-block;
-white-space: normal; 
+  .block-con {
+    vertical-align: top;
+    color: black;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 200px;
+    min-height: 300px;
+    display: inline-block;
+    white-space: normal;
+    scroll-snap-align: start; /* Add this line */
+  }
+
+  .container {
+    border: none;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    transition: scroll 0.3s ease-in-out;
+  }
+  
+  .container::-webkit-scrollbar {
+  display: none;
 }
 
-.container {
-border: none;
-overflow-x: scroll;
-overflow-y: hidden;
-white-space: nowrap; /* 強制子元素不換行的屬性可以保留 */
-scroll-snap-type: x mandatory;
-width:100%;
-}
+.container{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  }
 
-
+ .scroll-button {
+    width:40px;
+    height:40px;
+    background-color: black;
+    color:white;
+    border:none;
+    border-radius:50%;
+    margin: 10px;
+    cursor: pointer;
+  }
 
 
 
@@ -297,21 +318,13 @@ width:80%;
 <div class="block" id="top">
 <h1>網絡剝削</h1>
 <h3 style="color:gray;">通過網絡賭博、詐騙等手段，試圖從他人身上獲取金錢或獲利。</h3>
-<div style="width:100%; text-align:center;">
-<img class="block-top-img" src="https://raw.githubusercontent.com/ict-sba/ict-sba.github.io/main/VASBA/img-vasba/ASCII-ART/ascii-art_004.png">
-</div>
-  
 <a href=""><span class="learnmore">了解更多</span></a><br><br><br>
 </div> 
   
 <div class="block" id="top">
 <h1>網絡身份欺詐</h1>
 <h3 style="color:gray;">通過盜用他人的個人信息或身份證明文件，進行詐騙、犯罪或非法活動。</h3>
-<div style="width:100%; text-align:center;">
-<img class="block-top-img" src="https://github.com/ict-sba/ict-sba.github.io/blob/main/VASBA/img-vasba/ASCII-ART/22D955A0-A499-4E18-ABFC-84CC152BBB79.jpeg?raw=true">
-</div>
 <a href=""><span class="learnmore">了解更多</span></a><br><br><br>
-  
 </div>  
   
 <div class="block" id="top">
@@ -368,8 +381,24 @@ width:80%;
 <p>在社交媒體上設置隱私設置，限制誰可以看到您的帖子和個人信息。避免在公共Wi-Fi上輸入敏感信息，例如銀行帳戶信息或信用卡號碼。<br><br></p>
 </span>
 <span class="block-con">
+<h2>謹慎分享敏感信息</h2>
+<p>在網絡上謹慎分享個人敏感信息，如地址、職業、家庭情況等。避免在公開場合或不可信的網站上提供這些信息，以防止它們被不法分子利用。<br><br></p>
+</span>
+<span class="block-con">
 <h2>識別和預防</h2>
 <p>學會識別網絡欺淩的形式，例如騷擾、威脅、詐騙、誹謗和侮辱等。保持警惕，學會預防和避免危險情況，例如通過封鎖不良用戶、避免參與爭論和忽略惡意評論等。</p>
+</span>
+<span class="block-con">
+<h2>使用安全軟件</h2>
+<p>安裝和定期更新防病毒軟件、防火牆和反惡意軟件等安全工具，以保護您的設備免受病毒、惡意軟件和入侵攻擊。</p>
+</span>
+<span class="block-con">
+<h2>堅持尊重和禮貌</h2>
+<p>在線上保持尊重和禮貌，避免參與網絡爭吵、謾罵和人身攻擊。不回應或報復網絡欺淩，保持冷靜和理性。</p>
+</span>
+<span class="block-con">
+<h2>教育和意識提升</h2>
+<p>提高網絡安全意識，教育家人和同事有關網絡欺淩的風險和預防策略。分享安全使用網絡的最佳實踐和技巧。</p>
 </span>
 <span class="block-con">
 <h2>處理網絡欺淩事件</h2>
@@ -377,7 +406,12 @@ width:80%;
 </span>
 </div>
   
+<div style="width:100%;text-align:right;">
+    <button class="scroll-button" onclick="scrollContainer('left')">←</button>
+    <button class="scroll-button" onclick="scrollContainer('right')">→</button>
+  </div>
 </div>
+
   
 <!--宗旨-->
 <div style="background-color:#ffffff;padding:55px;">
@@ -436,7 +470,26 @@ width:80%;
   menuBtn.addEventListener('click', function() {
     menu.classList.toggle('active');
   });
-  </script>
+</script>
+  
+<script>
+function scrollContainer(direction) {
+    const container = document.querySelector('.container');
+    const scrollAmount = 200; // Adjust this value to control the scroll distance
+
+    if (direction === 'left') {
+      container.scrollBy({
+        left: -scrollAmount,
+        behavior: 'smooth',
+      });
+    } else if (direction === 'right') {
+      container.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth',
+      });
+    }
+  }
+</script>
 
 
 </body>
