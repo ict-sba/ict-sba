@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content=" width=device-width, initial-scale=1.0">
+<title>網絡騷擾</title>
+  
+<style>
+@import url（https://fonts.googleapis.com/earlyaccess/notosanstc.css）;
+
+body {
+  font-family:'Noto Sans TC',sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.menu-btn{
+font-weight: bold;
+z-index:6; 
+color:gray;
+padding:20px;
+font-size:20px;
+top:0px;
+position:fixed;
+font-size:25px;
+display:inline-block;
+transform: rotate(90deg) scalex(1.2);
+}
+
+.menu {
+  box-shadow: 5px 0px 15px rgba(0,0,0,0.2);
+  background-color:rgba(255,255,255,0.4);
+  background-size: 3px 3px;
+  backdrop-filter: saturate(50%) blur(9px);
+  -webkit-backdrop-filter: saturate(50%) blur(9px);
+  
+  text-align:center;
+  position:fixed;
+  top: 0;
+  left: -210px; 
+  width: 200px;
+  height: 100%;
+  transition: all 0.3s ease;
+  z-index:5;
+}
+
+.menu.active {
+  left: 0; /* reveal the menu by moving it back onto the screen */
+}
+
+.menu-btn:focus + .menu {
+  left: 0; /* reveal the menu when the button is focused (clicked or tabbed to) */
+}
+
+.font-menu-btn{
+font-size:18px;
+font-weight: bold;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fff;
+	border-bottom: 1px solid #ddd;
+	padding: 15px 20px;
+}
+
+.search-bar input[type="text"] {
+	border: none;
+	border-bottom: 1px solid #ddd;
+  border-top: 1px solid #eee;
+	padding: 5px;
+	margin: 5px;
+	width: 200px;
+}
+
+.user-menu button {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	padding: 5px 10px;
+	margin-right: 10px;
+  border-radius:15px;
+  color:rgb(0,122,255)
+}
+
+.inbox {
+	padding: 20px;
+}
+
+.inbox h1 {
+	margin-top: 0;
+}
+
+.new-messages {
+	background-color: #eee;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.count {
+	font-weight: bold;
+	color: #d93025;
+}
+
+.email-list li {
+	border-bottom: 1px solid #ddd;
+	padding: 10px 0;
+}
+
+.sender, .subject {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+.snippet {
+	color: #999;
+}
+
+ 
+#myList li{
+border-bottom: 2px solid #ccc;
+display:none;
+}
+
+#myList li:hover{
+background-color:#eee;
+}
+
+#fliter p{
+filter:blur(0px);
+}
+
+.subject p{
+filter: blur(2px);
+}
+
+.snippet p{
+filter: blur(2px);
+}
+
+.subject span{
+color:#bbb;
+}
+</style>
+</head>
+  
+<body>
+<div class="menu-btn">|||</div>
+<div class="menu">
+
+<br><br><br>
+<font class="font-menu-btn">主頁</font><br><br>
+<font class="font-menu-btn">
+<details>
+<summary>網絡欺淩種類</summary>
+<div style="text-align:left; transform: translateX(30px);">
+<ul>
+<li>網絡騷擾</li>
+<li>網絡詆毀</li>
+<li>網絡滲透</li>
+<li>網絡剝削</li>
+<li>網絡身份欺詐</li>
+<li>網絡報復</li>
+</ul>
+</div>
+</details>
+</font><br>
+  
+<font class="font-menu-btn">網絡欺淩影響</font><br><br>
+<font class="font-menu-btn">預防和應對策略</font><br><br>
+<font class="font-menu-btn">宗旨</font>
+  
+</div>
+  
+<header>
+&emsp;&emsp;
+<div class="search-bar">
+<input type="text" placeholder="Search mail">
+</div>
+  
+<div class="user-menu">
+<button>Settings</button>
+<button>Help</button>
+<button>Account</button>
+</div>
+</header>
+  
+<main>
+<div class="inbox">
+<h1>Inbox</h1>
+<div class="new-messages">
+<p>You have <span class="count">0</span> new messages</p>
+</div>
+  
+<ul id="myList" style="margin: 0;padding: 0;">
+<li id="fliter">
+<div class="sender">
+<p>？？？</p>
+<span>12:00 PM</span>
+</div>
+  
+<div class="subject">
+<p>電郵是網絡騷擾的一種形式</p>
+</div>
+  
+<div class="snippet">
+<p>通過電子郵件對他人進行騷擾、恐嚇或人身攻擊的行為。<br>
+這種行為可能會對受害人造成心理上的傷害，甚至可能對他們的生活和工作造成負面影響...</p>
+</div>
+</li>
+<li>
+<div class="sender">
+<p> DigitalDragon </p>
+<span>10:55 AM</span>
+</div>
+  
+<div class="subject">
+<p> 飢餓和貧困。 按摩但只是酵😍😍😍l</p>
+</div>
+  
+<div class="snippet">
+<p> 飢餓和貧困。 按摩但只是酵母，她...</p>
+</div>
+</li>
+<li>
+<div class="sender">
+<p> TechTurtle</p>
+<span>10:33 AM</span>
+</div>
+  
+<div class="subject">
+<p> 過敏自己L!,???需要一個 </p>
+</div>
+  
+<div class="snippet">
+<p> 感到興奮。 但悲傷的球員付出的代價，這並不是什麼值得尊敬的事情。 這是...</p>
+</div>
+</li>
+<li>
+<div class="sender">
+<p> PixelPenguin </p>
+<span>10:30 AM</span>
+</div>
+  
+<div class="subject">
+<p> 重要通知：您的帳戶已被鎖定 </p>
+</div>
+  
+<div class="snippet">
+<p> 親愛的客戶，我們注意到您的帳戶存在安全風險，因此將暫停您的帳戶。請點擊以...</p>
+</div>
+</li>
+<li>
+<div class="sender">
+<p> Bluebird88 </p>
+<span>10:17 AM</span>
+</div>
+  
+<div class="subject">
+<p>😀😀😀😀😀</p>
+</div>
+  
+<div class="snippet">
+<p> they how FFFFare you DDC emoji Math...</p>
+</div>
+</li>
+<li>
+<div class="sender">
+<p>NetNimbus</p>
+<span>10:14 AM</span>
+</div>
+  
+<div class="subject">
+<p>New features for GDXDmail</p>
+</div>
+  
+<div class="snippet">
+<p>Introducing new features for Gmail that will help you...</p>
+</div>
+</li>
+<li>
+<div class="sender">
+<p> CodeCrusader </p>
+<span>10:11 AM</span>
+</div>
+  
+<div class="subject">
+<p> !!!!!罐子裡不需要醬汁😀 </p>
+</div>
+  
+<div class="snippet">
+<p> 但悲傷的球員付出的代價，這並不是什麼值得尊敬的事情。 這是純...</p>
+</div>
+</li>
+<li>
+<div class="sender">
+<p> DigitalDragon </p>
+<span>10:08 AM</span>
+</div>
+  
+<div class="subject">
+<p> 飢餓和貧困。 按摩但只是酵😍😍😍l</p>
+</div>
+  
+<div class="snippet">
+<p> 飢餓和貧困。 按摩但只是酵母，她...</p>
+</div>
+</li>
+<li>
+<div class="sender">
+<p> TechTurtle</p>
+<span>10:07 AM</span>
+</div>
+  
+<div class="subject">
+<p> 過敏自己L!,???需要一個 </p>
+</div>
+  
+<div class="snippet">
+<p> 感到興奮。 但悲傷的球員付出的代價，這並不是什麼值得尊敬的事情。 這是...</p>
+</div>
+</li>
+<li>
+<div class="sender">
+<p> PixelPenguin </p>
+<span>10:05 AM</span>
+</div>
+  
+<div class="subject">
+<p> 重要通知：您的帳戶已被鎖定 </p>
+</div>
+  
+<div class="snippet">
+<p> 親愛的客戶，我們注意到您的帳戶存在安全風險，因此將暫停您的帳戶。請點擊以...</p>
+</div>
+</li>
+<li>
+<div class="sender">
+<p> Bluebird88 </p>
+<span>10:04 AM</span>
+</div>
+  
+<div class="subject">
+<p>😀😀😀😀😀</p>
+</div>
+  
+<div class="snippet">
+<p> they how FFFFare you DDC emoji Math...</p>
+</div>
+</li>
+<li>
+<div class="sender">
+<p>NetNimbus</p>
+<span>10:02 AM</span>
+</div>
+  
+<div class="subject">
+<p>New features for GDXDmail</p>
+</div>
+  
+<div class="snippet">
+<p>Introducing new features for Gmail that will help you...</p>
+</div>
+</li>
+<li>
+<div class="sender">
+<p>NetNimbus</p>
+<span>10:02 AM</span>
+</div>
+  
+<div class="subject">
+<p>NR featSss FuuuL ail</p>
+</div>
+  
+<div class="snippet">
+<p>Introducing new features for Gmail that will help you...</p>
+</div>
+</li>
+<li>
+<div class="sender">
+<p> DigitalDragon </p>
+<span>10:00 AM</span>
+</div>
+  
+<div class="subject">
+<p> 飢餓和貧困。 按摩但只是酵😍😍😍l</p>
+</div>
+  
+<div class="snippet">
+<p> 飢餓和貧困。 按摩但只是酵母，她...</p>
+</div>
+</li>
+<li>
+<div class="sender">
+<p> TechTurtle</p>
+<span>9:51 AM</span>
+</div>
+  
+<div class="subject">
+<p> 過敏自己L!,???需要一個 </p>
+</div>
+  
+<div class="snippet">
+<p> 感到興奮。 但悲傷的球員付出的代價，這並不是什麼值得尊敬的事情。 這是...</p>
+</div>
+</li>
+<li>
+<div class="sender">
+<p> PixelPenguin </p>
+<span>9:49 AM</span>
+</div>
+  
+<div class="subject">
+<p> 重要通知：您的帳戶已被鎖定 </p>
+</div>
+  
+<div class="snippet">
+<p> 親愛的客戶，我們注意到您的帳戶存在安全風險，因此將暫停您的帳戶。請點擊以...</p>
+</div>
+</li>
+<li>
+<div class="sender">
+<p> Bluebird88 </p>
+<span>9:44 AM</span>
+</div>
+  
+<div class="subject">
+<p>😀😀😀😀😀</p>
+</div>
+  
+<div class="snippet">
+<p> they how FFFFare you DDC emoji Math...</p>
+</div>
+</li>
+<li>
+<div class="sender">
+<p>NetNimbus</p>
+<span>9:40 AM</span>
+</div>
+  
+<div class="subject">
+<p>New features for GDXDmail</p>
+</div>
+  
+<div class="snippet">
+<p>Introducing new features for Gmail that will help you...</p>
+</div>
+</li>
+<li>
+<div class="sender">
+<p> CodeCrusader </p>
+<span>9:38 AM</span>
+</div>
+  
+<div class="subject">
+<p> !!!!!罐子裡不需要醬汁😀 </p>
+</div>
+  
+<div class="snippet">
+<p> 但悲傷的球員付出的代價，這並不是什麼值得尊敬的事情。 這是純...</p>
+</div>
+</li>
+<li>
+<div class="sender">
+<p> DigitalDragon </p>
+<span>9:36 AM</span>
+</div>
+  
+<div class="subject">
+<p> 飢餓和貧困。 按摩但只是酵😍😍😍l</p>
+</div>
+  
+<div class="snippet">
+<p> 飢餓和貧困。 按摩但只是酵母，她...</p>
+</div>
+</li>
+<li>
+<div class="sender">
+<p> TechTurtle</p>
+<span>9:36 AM</span>
+</div>
+  
+<div class="subject">
+<p> 過敏自己L!,???需要一個 </p>
+</div>
+  
+<div class="snippet">
+<p> 感到興奮。 但悲傷的球員付出的代價，這並不是什麼值得尊敬的事情。 這是...</p>
+</div>
+</li>
+<li>
+<div class="sender">
+<p> PixelPenguin </p>
+<span>9:21 AM</span>
+</div>
+  
+<div class="subject">
+<p> 重要通知：您的帳戶已被鎖定 </p>
+</div>
+  
+<div class="snippet">
+<p> 親愛的客戶，我們注意到您的帳戶存在安全風險，因此將暫停您的帳戶。請點擊以...</p>
+</div>
+</li>
+<li>
+<div class="sender">
+<p> Bluebird88 </p>
+<span>8:37 AM</span>
+</div>
+  
+<div class="subject">
+<p>😀😀😀😀😀</p>
+</div>
+  
+<div class="snippet">
+<p> they how FFFFare you DDC emoji Math...</p>
+</div>
+</li>
+<li>
+<div class="sender">
+<p>NetNimbus</p>
+<span>8:33 AM</span>
+</div>
+  
+<div class="subject">
+<p>New features for GDXDmail</p>
+</div>
+  
+<div class="snippet">
+<p>Introducing new features for Gmail that will help you...</p>
+</div>
+</li>
+<li>
+<div class="sender">
+<p>NetNimbus</p>
+<span>8:30 AM</span>
+</div>
+  
+<div class="subject">
+<p>NR featSss FuuuL ail</p>
+</div>
+  
+<div class="snippet">
+<p>Introducing new features for Gmail that will help you...</p>
+</div>
+</li>
+</ul>
+</div>
+</main>
+  
+<script>
+  const menuBtn = document.querySelector('.menu-btn');
+  const menu = document.querySelector('.menu');
+  
+  // toggle active class on menu when button is clicked
+  menuBtn.addEventListener('click', function() {
+    menu.classList.toggle('active');
+  });
+
+</script>
+
+<script>
+var listItems = document.querySelectorAll('#myList li');
+var index = listItems.length - 1; // 從最後一個元素開始顯示
+
+function showListItem() {
+    if (index >= 0) {
+        listItems[index].style.display = 'block';
+        index--;
+        setTimeout(showListItem, 100); // 1秒後執行 showListItem 函數
+    }
+}
+
+showListItem();
+</script>
+
+<script>
+var countElement = document.querySelector('.count');
+var count = parseInt(countElement.textContent); // 將初始值轉換為整數
+
+function updateCount() {
+    count++;
+    countElement.textContent = count; // 更新顯示的數字
+    if (count === 78) {
+        clearInterval(intervalId); // 停止定時器
+    }
+}
+
+var intervalId = setInterval(updateCount, 30); // 每秒執行一次 updateCount 函數
+</script>
+
+</body>
+</html>
