@@ -105,7 +105,6 @@
     .input-box {
       display: flex;
       margin-top: 10px;
-      
     }
 
     .input-box input[type="text"] {
@@ -141,6 +140,15 @@
       margin-top: 5px;
       margin-left: 10px;
     }
+
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+      color: black;
+      background-color: transparent;
+      text-decoration: none;
+    }
   </style>
 </head>
 
@@ -149,23 +157,23 @@
   <div class="menu">
 
     <br><br><br>
-    <font class="font-menu-btn">主頁</font><br><br>
+    <font class="font-menu-btn"><a href="https://ict-sba.github.io/VASBA/this-is-my-VASBA.html">主頁</a></font><br><br>
     <font class="font-menu-btn">
       <details>
         <summary>網絡欺淩種類</summary>
         <div style="text-align:left; transform: translateX(30px);">
           <ul>
-            <li>網絡騷擾</li>
-            <li>網絡詆毀</li>
-            <li>網絡身份欺詐</li>
+            <li><a href="https://ict-sba.github.io/VASBA/arrrrr/%E7%B6%B2%E7%B5%A1%E9%A8%B7%E6%93%BE.html">網絡騷擾</a></li>
+            <li><a href="https://ict-sba.github.io/VASBA/arrrrr/%E7%B6%B2%E7%B5%A1%E8%A9%86%E6%AF%80.html">網絡詆毀</a></li>
+            <li><a href="https://ict-sba.github.io/VASBA/arrrrr/%E7%B6%B2%E7%B5%A1%E8%BA%AB%E4%BB%BD%E6%AC%BA%E8%A9%90.html">網絡身份欺詐</a></li>
           </ul>
         </div>
       </details>
     </font><br>
 
-    <font class="font-menu-btn">網絡欺淩影響</font><br><br>
-    <font class="font-menu-btn">預防和應對策略</font><br><br>
-    <font class="font-menu-btn">宗旨</font>
+    <font class="font-menu-btn"><a href="https://ict-sba.github.io/VASBA/this-is-my-VASBA.html">網絡欺淩影響</a></font><br><br>
+    <font class="font-menu-btn"><a href="https://ict-sba.github.io/VASBA/this-is-my-VASBA.html">預防和應對策略</a></font><br><br>
+    <font class="font-menu-btn"><a href="https://ict-sba.github.io/VASBA/this-is-my-VASBA.html">宗旨</a></font>
 
   </div>
 
@@ -179,7 +187,7 @@
     </div>
 
   </div>
-    <div style="height:150px"></div>
+  <div style="height:150px"></div>
   <div class="aaa">
     <div class="input-box">
       <input type="text" id="messageInput" placeholder="輸入訊息...">
@@ -196,43 +204,34 @@
     });
   </script>
   <script>
- var messageCount = 0; // 初始化消息计数器
-
-function sendMessage() {
-  var messageInput = document.getElementById("messageInput");
-  var message = messageInput.value.trim(); // 使用 trim() 方法去除首尾空白字符
-  if (message === "") {
-    return; // 如果消息为空白，则不执行发送操作
-  }
-  
-  var currentDate = new Date();
-  var formattedDate = currentDate.toLocaleString();
-  
-  var messageElement = document.createElement("div");
-  messageElement.classList.add("message");
-  
-  var userMessageElement = document.createElement("div");
-  userMessageElement.classList.add("user-message");
-  userMessageElement.innerHTML = "不要點擊不明鏈接：如果你收到了一個不明鏈接，不要輕易點擊它。這可能是一個釣魚連結或包含惡意軟體的連結。避免點擊這些連結可以保護你的電腦和個人資訊的安全。<br><br>不要回覆不明訊息：如果你收到了不明訊息，特別是來自陌生人的訊息，最好不要回覆。回覆可能會進一步引發不必要的溝通或風險<br><br>忽略或刪除不明訊息：將不明訊息忽略或刪除是一個安全的做法。不要與不明來源的人或資訊互動，以確保自己的安全。<br><br>報告可疑訊息：如果你認為收到的資訊可能是釣魚、垃圾郵件或其他形式的詐欺行為，你可以將其報告給你所在的組織、電子郵件服務提供者或相關執法機構。這樣有助於預防其他人受到類似的威脅。";
-  
-  var dateElement = document.createElement("div");
-  dateElement.classList.add("message-date");
-  dateElement.textContent = formattedDate;
-  
-  messageElement.appendChild(userMessageElement);
-  messageElement.appendChild(dateElement);
-  
-  var chatBox = document.getElementById("chatBox");
-  chatBox.appendChild(messageElement);
-  
-  messageInput.value = "";
-  chatBox.scrollTop = chatBox.scrollHeight;
-  
-  messageCount++; // 增加消息计数器
-if (messageCount === 1) {
-      alert("不要回覆!");
-    }  
-}
+    var messageCount = 0; // 初始化消息计数器
+    function sendMessage() {
+      var messageInput = document.getElementById("messageInput");
+      var message = messageInput.value.trim(); // 使用 trim() 方法去除首尾空白字符
+      if (message === "") {
+        return; // 如果消息为空白，则不执行发送操作
+      }
+      var currentDate = new Date();
+      var formattedDate = currentDate.toLocaleString();
+      var messageElement = document.createElement("div");
+      messageElement.classList.add("message");
+      var userMessageElement = document.createElement("div");
+      userMessageElement.classList.add("user-message");
+      userMessageElement.innerHTML = "不要點擊不明鏈接：如果你收到了一個不明鏈接，不要輕易點擊它。這可能是一個釣魚連結或包含惡意軟體的連結。避免點擊這些連結可以保護你的電腦和個人資訊的安全。<br><br>不要回覆不明訊息：如果你收到了不明訊息，特別是來自陌生人的訊息，最好不要回覆。回覆可能會進一步引發不必要的溝通或風險<br><br>忽略或刪除不明訊息：將不明訊息忽略或刪除是一個安全的做法。不要與不明來源的人或資訊互動，以確保自己的安全。<br><br>報告可疑訊息：如果你認為收到的資訊可能是釣魚、垃圾郵件或其他形式的詐欺行為，你可以將其報告給你所在的組織、電子郵件服務提供者或相關執法機構。這樣有助於預防其他人受到類似的威脅。";
+      var dateElement = document.createElement("div");
+      dateElement.classList.add("message-date");
+      dateElement.textContent = formattedDate;
+      messageElement.appendChild(userMessageElement);
+      messageElement.appendChild(dateElement);
+      var chatBox = document.getElementById("chatBox");
+      chatBox.appendChild(messageElement);
+      messageInput.value = "";
+      chatBox.scrollTop = chatBox.scrollHeight;
+      messageCount++; // 增加消息计数器
+      if (messageCount === 1) {
+        alert("不要回覆!");
+      }
+    }
   </script>
 
 </body>
