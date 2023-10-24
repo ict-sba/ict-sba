@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>網絡詆毀</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+@import url（https://fonts.googleapis.com/earlyaccess/notosanstc.css）;
+
+body {
+font-family:'Noto Sans TC',sans-serif;
+margin: 0;
+padding: 0;
+}
+
+.menu-btn{
+font-weight: bold;
+z-index:6; 
+color:gray;
+padding:20px;
+font-size:20px;
+top:0px;
+position:fixed;
+font-size:25px;
+display:inline-block;
+transform: rotate(90deg) scalex(1.2);
+}
+
+.menu {
+  box-shadow: 5px 0px 15px rgba(0,0,0,0.2);
+  background-color:rgba(255,255,255,0.4);
+  background-size: 3px 3px;
+  backdrop-filter: saturate(50%) blur(9px);
+  -webkit-backdrop-filter: saturate(50%) blur(9px);
+  
+  text-align:center;
+  position:fixed;
+  top: 0;
+  left: -210px; 
+  width: 200px;
+  height: 100%;
+  transition: all 0.3s ease;
+  z-index:5;
+}
+
+.menu.active {
+  left: 0; /* reveal the menu by moving it back onto the screen */
+}
+
+.menu-btn:focus + .menu {
+  left: 0; /* reveal the menu when the button is focused (clicked or tabbed to) */
+}
+
+.font-menu-btn{
+font-size:18px;
+font-weight: bold;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 20px;
+}
+
+section {
+	width: 100%;
+}
+
+#tweets .tweet {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+#tweets .tweet .user-info {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+#tweets .tweet .user-info img {
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+#tweets .tweet .user-info h3 {
+	margin: 0;
+}
+
+#tweets .tweet .user-info p {
+	color: #999;
+	margin: 0;
+}
+
+.username{
+color:rgb(0,122,255);
+}
+
+.container {
+	margin: 0 auto;
+	padding: 20px;
+	text-align: center;
+}
+
+h1 {
+	font-size: 2em;
+	margin-bottom: 20px;
+}
+
+p {
+	font-size: 1.2em;
+	margin-bottom: 10px;
+}
+
+input[type="text"] {
+	font-size: 15px;
+	padding: 10px;
+}
+
+button {
+  background-color:transparent;
+	color: #aaa;
+	border: none;
+	border-radius: 5px;
+  font-size:25px;
+}
+
+
+
+section .tweet{
+	display: none;
+}
+
+
+
+
+</style>
+
+</head>
+  
+<body>
+<div class="menu-btn">|||</div>
+<div class="menu">
+
+<br><br><br>
+<font class="font-menu-btn">主頁</font><br><br>
+<font class="font-menu-btn">
+<details>
+<summary>網絡欺淩種類</summary>
+<div style="text-align:left; transform: translateX(30px);">
+<ul>
+<li>網絡騷擾</li>
+<li>網絡詆毀</li>
+<li>網絡滲透</li>
+<li>網絡剝削</li>
+<li>網絡身份欺詐</li>
+<li>網絡報復</li>
+</ul>
+</div>
+</details>
+</font><br>
+  
+<font class="font-menu-btn">網絡欺淩影響</font><br><br>
+<font class="font-menu-btn">預防和應對策略</font><br><br>
+<font class="font-menu-btn">宗旨</font>
+  
+</div>
+
+  
+<div class="all">
+  
+<div class="container">&ensp;&ensp;&ensp;&ensp;
+<input type="text" id="username-input" placeholder="暱稱：" pattern="[A-Za-z0-9_]{6,}">
+<span id="submit-button" class="sb" style="font-size:25px;color:gray;">></span>
+  
+</div>
+
+<main>
+<section id="tweets" class="main"><br>
+<h2>Posts</h2>
+  
+<div class="tweet">
+<div class="user-info">
+<img src="https://via.placeholder.com/50x50" alt="Profile Picture">
+<div>
+<h3>John Doe</h3>
+<p>@johndoe</p>
+</div>
+</div>
+<p><span class="username"></span> 是真正的問題兒童，他經常在學校惹是生非，甚至被學校開除過一次。</p>
+</div>
+  
+<div class="tweet">
+<div class="user-info">
+<img src="https://via.placeholder.com/50x50" alt="Profile Picture">
+<div>
+<h3>John Doe</h3>
+<p>@johndoe</p>
+</div>
+</div>
+<p><span class="username"></span> 該吃藥了</p>
+</div>
+  
+<div class="tweet">
+<div class="user-info">
+<img src="https://via.placeholder.com/50x50" alt="Profile Picture">
+<div>
+<h3>John Doe</h3>
+<p>@johndoe</p>
+</div>
+</div>
+<p><span class="username"></span> 你有病要吃藥</p>
+</div>
+  
+<div class="tweet">
+<div class="user-info">
+<img src="https://via.placeholder.com/50x50" alt="Profile Picture">
+<div>
+<h3>John Doe</h3>
+<p>@johndoe</p>
+</div>
+</div>
+<p><span class="username"></span> 真是個麻煩的傢伙據說他經常在學校偷東西，還曾經在課堂上公然挑釁老師，成績也不太好，一直在掛科。</p>
+</div>
+  
+<div class="tweet">
+<div class="user-info">
+<img src="https://via.placeholder.com/50x50" alt="Profile Picture">
+<div>
+<h3>Jane Doe</h3>
+<p>@janedoe</p>
+</div>
+				</div>
+<p>Proin a erat elit. Nulla facilisi. Phasellus felis odio, efficitur vel magna sed, vestibulum feugiat ipsum. Ut vel posuere nulla. Vestibulum auctor enim sit amet nisi varius commodo. Donec malesuada enim ut felis elementum mollis. Vivamus vitae ipsum in ante maximus ultrices. Sed tempus, velit a sodales bibendum, tortor sem blandit turpis, quis laoreet lectus orci ac mauris.</p>
+</div>
+  
+</section>
+</main>
+  
+
+</div>
+  
+  
+  
+<script>
+window.confirm('感謝您蒞臨我們的網頁。我們希望提醒您，本網頁可能包含一些令人感到冒犯或不適的內容。這些內容的目的是僅供教育，並不代表我們的觀點或立場。如果您在網頁內容中發現任何令您感到不適或冒犯的部分，請盡快退出網頁。');
+
+
+
+		// 獲取提交按鈕
+		var submit_button = document.getElementById("submit-button");
+		// 註冊點擊事件處理程序
+		submit_button.onclick = function() {
+			// 獲取用戶名字
+			var username_input = document.getElementById("username-input");
+			var username = username_input.value;
+			if (username != null && username != "") {
+				// 將@加到用戶名字前面
+				var at_username = "@" + username;
+				// 獲取所有需要顯示用戶名稱的元素
+				var username_elements = document.querySelectorAll(".username");
+				// 將用戶名稱插入到這些元素中
+				for (var i = 0; i < username_elements.length; i++) {
+					username_elements[i].innerHTML = at_username;
+				}
+			}
+		}
+	</script>
+  
+  
+<script>
+var listItems = document.querySelectorAll('section .tweet');
+var index = listItems.length - 1; // 從最後一個元素開始顯示
+  
+// 获取所有 class="sb" 的元素
+const sbElements = document.querySelectorAll('.sb');
+
+// 遍历所有元素并为其绑定点击事件
+sbElements.forEach(function(sbElement) {
+  sbElement.addEventListener('click', function showListItem() {
+    if (index >= 0) {
+        listItems[index].style.display = 'block';
+        index--;
+        setTimeout(showListItem, 1000); // 1秒後執行 showListItem 函數
+        }
+     });
+ });
+  
+  
+showListItem();
+</script>
+  
+  
+<script>
+  const menuBtn = document.querySelector('.menu-btn');
+  const menu = document.querySelector('.menu');
+  
+  // toggle active class on menu when button is clicked
+  menuBtn.addEventListener('click', function() {
+    menu.classList.toggle('active');
+  });
+</script>
+
+
+
+
+  
+</body>
+</html>
