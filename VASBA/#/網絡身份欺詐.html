@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content=" width=device-width, initial-scale=1.0">
+  <title>網絡身份欺詐</title>
+  <style>
+    @import url（https: //fonts.googleapis.com/earlyaccess/notosanstc.css）;
+
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0px;
+      padding: 0px;
+      overflow-x: hidden;
+    }
+
+    .menu-btn {
+      font-weight: bold;
+      z-index: 6;
+      color: gray;
+      padding: 20px;
+      font-size: 20px;
+      top: 0px;
+      position: fixed;
+      font-size: 25px;
+      display: inline-block;
+      transform: rotate(90deg) scalex(1.2);
+    }
+
+    .menu {
+      box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.2);
+      background-color: rgba(255, 255, 255, 0.4);
+      background-size: 3px 3px;
+      backdrop-filter: saturate(50%) blur(9px);
+      -webkit-backdrop-filter: saturate(50%) blur(9px);
+      text-align: center;
+      position: fixed;
+      top: 0;
+      left: -220px;
+      width: 200px;
+      height: 100%;
+      transition: all 0.3s ease;
+      z-index: 5;
+    }
+
+    .menu.active {
+      left: 0;
+      /* reveal the menu by moving it back onto the screen */
+    }
+
+    .menu-btn:focus+.menu {
+      left: 0;
+      /* reveal the menu when the button is focused (clicked or tabbed to) */
+    }
+
+    .font-menu-btn {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .container {
+      width: 90%;
+      padding: 20px;
+      margin: 0px;
+      overflow-x: hidden;
+    }
+
+    .chat-box {
+      overflow-y: auto;
+      padding: 10px;
+    }
+
+    .message {
+      display: flex;
+      margin-bottom: 10px;
+      max-width: 300px;
+    }
+
+    .message .user-message {
+      background-color: #eeeeee;
+      padding: 5px 10px;
+      border-radius: 10px;
+      margin-left: 10px;
+      max-width: 300px;
+      word-break: break-all;
+    }
+
+    .message .user-message::before {
+      font-weight: bold;
+      max-width: 40px;
+    }
+
+    .message .other-message {
+      background-color: #e1f5fe;
+      padding: 5px 10px;
+      border-radius: 10px;
+      margin-left: 10px;
+    }
+
+    .message .other-message::before {
+      font-weight: bold;
+    }
+
+    .input-box {
+      display: flex;
+      margin-top: 10px;
+      
+    }
+
+    .input-box input[type="text"] {
+      flex-grow: 1;
+      padding: 5px;
+    }
+
+    .input-box {
+      bottom: 0;
+      /* 将输入框固定在底部 */
+      width: calc(100% - 50px);
+      background-color: #fff;
+      padding: 10px;
+    }
+
+    .input-box button {
+      min-width: 50px;
+    }
+
+    .aaa {
+      position: fixed;
+      width: 100%;
+      text-align: center;
+      bottom: 0;
+      padding: 10px;
+      background-color: white;
+    }
+
+    /* 其他CSS样式设置 */
+    .message .message-date {
+      font-size: 12px;
+      color: #888;
+      margin-top: 5px;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="menu-btn">|||</div>
+  <div class="menu">
+
+    <br><br><br>
+    <font class="font-menu-btn">主頁</font><br><br>
+    <font class="font-menu-btn">
+      <details>
+        <summary>網絡欺淩種類</summary>
+        <div style="text-align:left; transform: translateX(30px);">
+          <ul>
+            <li>網絡騷擾</li>
+            <li>網絡詆毀</li>
+            <li>網絡身份欺詐</li>
+          </ul>
+        </div>
+      </details>
+    </font><br>
+
+    <font class="font-menu-btn">網絡欺淩影響</font><br><br>
+    <font class="font-menu-btn">預防和應對策略</font><br><br>
+    <font class="font-menu-btn">宗旨</font>
+
+  </div>
+
+  <div class="container">
+
+    <div class="chat-box" id="chatBox">
+      <!-- 預設的訊息 -->
+      <div class="message">
+        <div class="other-message">WeApp 官方檢測您帳號有安全風險，2小時後將永久註銷不可解封 ; 為避免帳號封禁請聯絡客服完成驗證<a href="">WeApp.com</a></div>
+      </div>
+    </div>
+
+  </div>
+    <div style="height:150px"></div>
+  <div class="aaa">
+    <div class="input-box">
+      <input type="text" id="messageInput" placeholder="輸入訊息...">
+      <button onclick="sendMessage()">發送</button>
+    </div>
+  </div>
+
+  <script>
+    const menuBtn = document.querySelector('.menu-btn');
+    const menu = document.querySelector('.menu');
+    // toggle active class on menu when button is clicked
+    menuBtn.addEventListener('click', function() {
+      menu.classList.toggle('active');
+    });
+  </script>
+  <script>
+ var messageCount = 0; // 初始化消息计数器
+
+function sendMessage() {
+  var messageInput = document.getElementById("messageInput");
+  var message = messageInput.value.trim(); // 使用 trim() 方法去除首尾空白字符
+  if (message === "") {
+    return; // 如果消息为空白，则不执行发送操作
+  }
+  
+  var currentDate = new Date();
+  var formattedDate = currentDate.toLocaleString();
+  
+  var messageElement = document.createElement("div");
+  messageElement.classList.add("message");
+  
+  var userMessageElement = document.createElement("div");
+  userMessageElement.classList.add("user-message");
+  userMessageElement.innerHTML = "不要點擊不明鏈接：如果你收到了一個不明鏈接，不要輕易點擊它。這可能是一個釣魚連結或包含惡意軟體的連結。避免點擊這些連結可以保護你的電腦和個人資訊的安全。<br><br>不要回覆不明訊息：如果你收到了不明訊息，特別是來自陌生人的訊息，最好不要回覆。回覆可能會進一步引發不必要的溝通或風險<br><br>忽略或刪除不明訊息：將不明訊息忽略或刪除是一個安全的做法。不要與不明來源的人或資訊互動，以確保自己的安全。<br><br>報告可疑訊息：如果你認為收到的資訊可能是釣魚、垃圾郵件或其他形式的詐欺行為，你可以將其報告給你所在的組織、電子郵件服務提供者或相關執法機構。這樣有助於預防其他人受到類似的威脅。";
+  
+  var dateElement = document.createElement("div");
+  dateElement.classList.add("message-date");
+  dateElement.textContent = formattedDate;
+  
+  messageElement.appendChild(userMessageElement);
+  messageElement.appendChild(dateElement);
+  
+  var chatBox = document.getElementById("chatBox");
+  chatBox.appendChild(messageElement);
+  
+  messageInput.value = "";
+  chatBox.scrollTop = chatBox.scrollHeight;
+  
+  messageCount++; // 增加消息计数器
+if (messageCount === 1) {
+      alert("不要回覆!");
+    }  
+}
+  </script>
+
+</body>
+
+</html>
